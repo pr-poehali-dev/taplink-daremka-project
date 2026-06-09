@@ -10,6 +10,7 @@ const approaches = [
   { icon: "Compass", title: "Психологическое консультирование", desc: "Работа с тревогой, самооценкой, кризисами идентичности и жизненными переходами." },
   { icon: "Star", title: "Личностный рост", desc: "Помогаю раскрыть потенциал, найти ресурсы и выстроить жизнь в соответствии с ценностями." },
   { icon: "Users", title: "Групповые сессии", desc: "Работа в группе — уникальная возможность получить поддержку, обратную связь и новый опыт." },
+  { icon: "HeartHandshake", title: "Сексология", desc: "Работа с интимностью, сексуальной идентичностью, отношениями и сексуальными дисфункциями в безопасном пространстве." },
 ];
 
 const steps = [
@@ -75,7 +76,7 @@ export default function Index() {
             </div>
             <div>
               <span className="font-cormorant text-lg font-semibold text-[#2c2420] tracking-wide">Дарья Емикеева</span>
-              <span className="hidden sm:inline text-xs text-[#9c7b6e] ml-2">коуч · психолог</span>
+              <span className="hidden sm:inline text-xs text-[#9c7b6e] ml-2">психолог · сексолог · коуч</span>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm text-[#7a5f54]">
@@ -108,7 +109,7 @@ export default function Index() {
               <em className="font-semibold text-[#b07d62] not-italic">собой</em>
             </h1>
             <p className="text-[#7a5f54] text-lg leading-relaxed mb-10 max-w-md font-light">
-              Психолог-консультант, коуч ICF и бизнес-тренер. Специализируюсь на МАК-терапии для личностного и профессионального роста.
+              Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Специализируюсь на МАК-терапии для личностного и профессионального роста.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-8 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200">
@@ -178,7 +179,7 @@ export default function Index() {
               <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Об авторе</div>
               <h2 className="font-cormorant text-4xl lg:text-5xl font-light mb-6">Дарья Емикеева</h2>
               <p className="text-[#c4a99a] leading-relaxed mb-8 font-light">
-                Психолог-консультант, коуч ICF и бизнес-тренер. Помогаю людям раскрыть потенциал, преодолеть внутренние барьеры и выстроить путь к профессиональному и личностному росту через МАК-терапию.
+                Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям раскрыть потенциал, преодолеть внутренние барьеры и выстроить путь к личностному и профессиональному росту через МАК-терапию.
               </p>
               <div className="space-y-4">
                 {[
@@ -349,7 +350,7 @@ export default function Index() {
             <div className="w-7 h-7 rounded-full bg-[#b07d62] flex items-center justify-center">
               <Icon name="Sprout" size={13} className="text-[#faf7f4]" />
             </div>
-            <span className="font-cormorant text-[#faf7f4] font-medium tracking-wide">Дарья Емикеева · коуч · психолог</span>
+            <span className="font-cormorant text-[#faf7f4] font-medium tracking-wide">Дарья Емикеева · психолог · сексолог · коуч</span>
           </div>
           <div className="text-[#c4a99a]/40 text-xs font-light">© 2024 · Все встречи конфиденциальны</div>
           <div className="flex items-center gap-1 text-[#c4a99a]/40 text-xs font-light">
