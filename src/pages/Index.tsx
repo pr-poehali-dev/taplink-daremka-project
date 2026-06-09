@@ -102,7 +102,7 @@ export default function Index() {
           <div>
             <div className="inline-flex items-center gap-2 bg-[#f0e6de] text-[#b07d62] text-xs font-medium px-4 py-2 rounded-full mb-8">
               <Icon name="MapPin" size={12} />
-              Москва · Онлайн по всему миру
+              Москва · Онлайн через Яндекс Телемост
             </div>
             <h1 className="font-cormorant text-5xl lg:text-6xl font-light leading-snug mb-6 text-[#2c2420]">
               Расти. Меняться.<br />Становиться<br />
@@ -290,10 +290,10 @@ export default function Index() {
             </p>
             <div className="space-y-5 mb-10">
               {[
-                ["Phone", "+7 (916) 123-45-67", "Telegram · WhatsApp"],
-                ["Mail", "anna@sokolova-psy.ru", "Email"],
-                ["MapPin", "Москва, Чистые Пруды", "Очные встречи"],
-                ["Video", "Zoom · Google Meet", "Онлайн-сессии"],
+                ["Phone", "+7 (918) 537-93-05", "Телефон · WhatsApp"],
+                ["Mail", "daremka-5@mail.ru", "Email"],
+                ["MapPin", "Москва, очно по договорённости", "Очные встречи"],
+                ["Video", "Яндекс Телемост", "Онлайн-сессии"],
               ].map(([icon, val, label], i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-[#f0e6de] flex items-center justify-center flex-shrink-0">
