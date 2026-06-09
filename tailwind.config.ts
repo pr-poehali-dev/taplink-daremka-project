@@ -19,7 +19,7 @@ export default {
 			}
 		},
 		fontFamily: {
-			'golos': ['Golos Text', 'sans-serif'],
+			'rubik': ['Rubik', 'sans-serif'],
 			'cormorant': ['Cormorant', 'serif'],
 		},
 		extend: {
