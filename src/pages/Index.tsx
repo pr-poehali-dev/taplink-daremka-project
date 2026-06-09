@@ -119,7 +119,7 @@ export default function Index() {
               </button>
             </div>
             <div className="mt-12 flex items-center gap-8">
-              {[["8+", "лет практики"], ["400+", "клиентов"], ["97%", "рекомендуют"]].map(([val, label], i) => (
+              {[["5+", "лет практики"], ["200+", "клиентов"], ["ICF", "сертификация"]].map(([val, label], i) => (
                 <div key={i}>
                   <div className="font-cormorant text-3xl font-semibold text-[#b07d62]">{val}</div>
                   <div className="text-xs text-[#9c7b6e] mt-0.5">{label}</div>
