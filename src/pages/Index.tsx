@@ -80,7 +80,7 @@ export default function Index() {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm text-[#7a5f54]">
-            {[["approaches", "Подходы"], ["steps", "Процесс"], ["pricing", "Стоимость"], ["contacts", "Контакты"]].map(([id, label]) => (
+            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["contacts", "Контакты"]].map(([id, label]) => (
               <button key={id} onClick={() => scrollTo(id)} className="hover:text-[#b07d62] transition-colors duration-200">
                 {label}
               </button>
@@ -150,6 +150,88 @@ export default function Index() {
                 <p className="text-[#9c7b6e] text-sm leading-relaxed font-light">{a.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* METHOD */}
+      <section id="method" className="py-24 bg-[#2c2420] overflow-hidden relative">
+        <div className="absolute right-0 top-0 w-64 h-64 rounded-full bg-[#b07d62]/5 -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute left-0 bottom-0 w-96 h-96 rounded-full bg-[#b07d62]/5 translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-6 relative">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest">Авторская методика</div>
+            <div className="h-px flex-1 bg-[#b07d62]/20 max-w-[80px]" />
+          </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2 className="font-cormorant text-4xl lg:text-5xl font-light text-[#faf7f4] mb-6 leading-tight">
+                Методика<br />
+                <em className="text-[#b07d62] not-italic font-semibold">«Дерево определения»</em>
+              </h2>
+              <p className="text-[#c4a99a] leading-relaxed mb-8 font-light">
+                Статистика разводов пугает, но ещё больше — ощущение замкнутого круга в отношениях. Мы ищем «своего человека», но часто не знаем, кто мы сами. Методика «Дерево определения» — это метафорический инструмент для глубокой диагностики личности, разработанный Дарьей Емикеевой.
+              </p>
+              <p className="text-[#c4a99a] leading-relaxed mb-10 font-light">
+                Мы оцениваем партнёра по его поведению (кроне), не понимая его ценностей (корней) и характера (ствола). Эта методика помогает выйти из этого круга.
+              </p>
+              <div className="space-y-3 mb-10">
+                <div className="text-[#c4a99a]/60 text-xs uppercase tracking-widest mb-4">Что вы получите</div>
+                {[
+                  "Чёткое понимание своих сильных сторон и зон роста",
+                  "Инструмент для анализа совместимости с партнёром",
+                  "Стратегию для построения гармоничных отношений",
+                  "Осознание, как ваш характер влияет на конфликты",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-[#b07d62]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon name="Check" size={11} className="text-[#b07d62]" />
+                    </div>
+                    <span className="text-[#c4a99a] text-sm font-light leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-8 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200">
+                Записаться на практикум
+              </button>
+            </div>
+            <div className="space-y-5">
+              {[
+                {
+                  icon: "Sprout",
+                  title: "Корни — ваши ценности",
+                  desc: "Фундамент личности: семья, воспитание, культурные нормы, убеждения. Именно корни обеспечивают устойчивость и формируют глубинные представления о мире и о себе.",
+                  num: "01",
+                },
+                {
+                  icon: "TreePine",
+                  title: "Ствол — ваш характер",
+                  desc: "Устойчивые черты личности: темперамент, эмоции, мотивация. Хотя ствол кажется неизменным, он способен адаптироваться под влиянием опыта и обстоятельств.",
+                  num: "02",
+                },
+                {
+                  icon: "Leaf",
+                  title: "Крона — ваше поведение",
+                  desc: "Повседневные мысли, чувства и поступки. Крона наиболее изменчива, но определяется корнями и стволом — именно они задают потенциал её развития.",
+                  num: "03",
+                },
+              ].map((el, i) => (
+                <div key={i} className="bg-[#3d302b] rounded-2xl p-6 border border-[#5a3f35] hover:border-[#b07d62]/40 transition-colors duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#b07d62]/20 flex items-center justify-center flex-shrink-0">
+                      <Icon name={el.icon} size={18} className="text-[#b07d62]" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-[#b07d62]/50 text-xs font-medium">{el.num}</span>
+                        <h3 className="font-medium text-[#faf7f4] text-sm">{el.title}</h3>
+                      </div>
+                      <p className="text-[#c4a99a] text-sm font-light leading-relaxed">{el.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
