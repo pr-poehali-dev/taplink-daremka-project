@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/files/17cfd4d4-3b71-432c-9c2e-565eed3530ca.jpg";
 
 const approaches = [
-  { icon: "Brain", title: "МАК-терапия", desc: "Метафорические ассоциативные карты — мягкий и глубокий инструмент для работы с подсознанием, страхами и внутренними блоками." },
+  { icon: "Brain", title: "МАК-терапия", desc: "Один из инструментов в работе: метафорические ассоциативные карты помогают образно исследовать внутренний мир, страхи и скрытые ресурсы." },
   { icon: "TrendingUp", title: "Коучинг ICF", desc: "Профессиональный коучинг по стандартам ICF для достижения целей в жизни и карьере." },
   { icon: "Briefcase", title: "Бизнес-тренинги", desc: "Корпоративные и групповые программы для развития команд, лидерства и управленческих компетенций." },
   { icon: "Compass", title: "Психологическое консультирование", desc: "Работа с тревогой, самооценкой, кризисами идентичности и жизненными переходами." },
@@ -109,7 +109,7 @@ export default function Index() {
               <em className="font-semibold text-[#b07d62] not-italic">собой</em>
             </h1>
             <p className="text-[#7a5f54] text-lg leading-relaxed mb-10 max-w-md font-light">
-              Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Специализируюсь на МАК-терапии для личностного и профессионального роста.
+              Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям расти и меняться, используя широкий арсенал методов — от МАК-терапии до авторских методик.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-8 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200">
@@ -260,7 +260,7 @@ export default function Index() {
               <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Об авторе</div>
               <h2 className="font-cormorant text-4xl lg:text-5xl font-light mb-6">Дарья Емикеева</h2>
               <p className="text-[#c4a99a] leading-relaxed mb-8 font-light">
-                Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям раскрыть потенциал, преодолеть внутренние барьеры и выстроить путь к личностному и профессиональному росту через МАК-терапию.
+                Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям раскрыть потенциал и преодолеть внутренние барьеры — через индивидуальный подбор методов: МАК-терапию, коучинг, авторские методики и другие инструменты.
               </p>
               <div className="space-y-4">
                 {[
