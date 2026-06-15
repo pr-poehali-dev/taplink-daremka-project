@@ -163,76 +163,75 @@ export default function Index() {
             <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest">Авторская методика</div>
             <div className="h-px flex-1 bg-[#b07d62]/20 max-w-[80px]" />
           </div>
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <h2 className="font-cormorant text-4xl lg:text-5xl font-light text-[#faf7f4] mb-6 leading-tight">
-                Методика<br />
-                <em className="text-[#b07d62] not-italic font-semibold">«Дерево определения»</em>
-              </h2>
-              <p className="text-[#c4a99a] leading-relaxed mb-8 font-light">
-                Статистика разводов пугает, но ещё больше — ощущение замкнутого круга в отношениях. Мы ищем «своего человека», но часто не знаем, кто мы сами. Методика «Дерево определения» — это метафорический инструмент для глубокой диагностики личности, разработанный Дарьей Емикеевой.
-              </p>
-              <p className="text-[#c4a99a] leading-relaxed mb-10 font-light">
-                Мы оцениваем партнёра по его поведению (кроне), не понимая его ценностей (корней) и характера (ствола). Эта методика помогает выйти из этого круга.
-              </p>
-              <div className="space-y-3 mb-10">
-                <div className="text-[#c4a99a]/60 text-xs uppercase tracking-widest mb-4">Что вы получите</div>
-                {[
-                  "Чёткое понимание своих сильных сторон и зон роста",
-                  "Инструмент для анализа совместимости с партнёром",
-                  "Стратегию для построения гармоничных отношений",
-                  "Осознание, как ваш характер влияет на конфликты",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#b07d62]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon name="Check" size={11} className="text-[#b07d62]" />
-                    </div>
-                    <span className="text-[#c4a99a] text-sm font-light leading-relaxed">{item}</span>
-                  </div>
-                ))}
+          {/* Intro */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="font-cormorant text-4xl lg:text-5xl font-light text-[#faf7f4] mb-6 leading-tight">
+              Что, если ваша жизнь —<br />
+              <em className="text-[#b07d62] not-italic font-semibold">это дерево?</em>
+            </h2>
+            <p className="text-[#c4a99a] leading-relaxed font-light mb-4">
+              Представьте: у вас есть <strong className="text-[#faf7f4] font-normal">корни</strong> (ценности и убеждения), <strong className="text-[#faf7f4] font-normal">ствол</strong> (характер и стержень) и <strong className="text-[#faf7f4] font-normal">крона</strong> (поведение и то, как вы проявляете себя в мире).
+            </p>
+            <p className="text-[#c4a99a] leading-relaxed font-light">
+              Когда все части в гармонии — дерево растёт сильным. Но что, если корни не питают ствол? Или крона растёт в другую сторону? Любой дисбаланс — это сигнал.
+            </p>
+          </div>
+
+          {/* Tree cards */}
+          <div className="grid md:grid-cols-3 gap-5 mb-16">
+            {[
+              { icon: "Sprout", num: "01", title: "Корни — ваши ценности", desc: "Семья, воспитание, убеждения. Формируют глубинные представления о мире и о себе. Именно здесь — фундамент всей личности." },
+              { icon: "TreePine", num: "02", title: "Ствол — ваш характер", desc: "Темперамент, мотивация, эмоции. Кажется неизменным, но адаптируется под влиянием опыта и жизненных обстоятельств." },
+              { icon: "Leaf", num: "03", title: "Крона — ваше поведение", desc: "Мысли, чувства, поступки в повседневной жизни. Наиболее изменчива, но её потенциал задают корни и ствол." },
+            ].map((el, i) => (
+              <div key={i} className="bg-[#3d302b] rounded-2xl p-6 border border-[#5a3f35] hover:border-[#b07d62]/40 transition-colors duration-300 text-center">
+                <div className="w-12 h-12 rounded-full bg-[#b07d62]/20 flex items-center justify-center mx-auto mb-4">
+                  <Icon name={el.icon} size={20} className="text-[#b07d62]" />
+                </div>
+                <div className="text-[#b07d62]/50 text-xs font-medium mb-2">{el.num}</div>
+                <h3 className="font-medium text-[#faf7f4] text-sm mb-3">{el.title}</h3>
+                <p className="text-[#c4a99a] text-sm font-light leading-relaxed">{el.desc}</p>
               </div>
-              <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-8 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200">
-                Записаться на практикум
-              </button>
-            </div>
-            <div className="space-y-5">
+            ))}
+          </div>
+
+          {/* Areas */}
+          <div className="mb-16">
+            <div className="text-[#c4a99a]/60 text-xs uppercase tracking-widest text-center mb-8">Где методика меняет взгляд на ситуацию</div>
+            <div className="grid md:grid-cols-2 gap-5">
               {[
-                {
-                  icon: "Sprout",
-                  title: "Корни — ваши ценности",
-                  desc: "Фундамент личности: семья, воспитание, культурные нормы, убеждения. Именно корни обеспечивают устойчивость и формируют глубинные представления о мире и о себе.",
-                  num: "01",
-                },
-                {
-                  icon: "TreePine",
-                  title: "Ствол — ваш характер",
-                  desc: "Устойчивые черты личности: темперамент, эмоции, мотивация. Хотя ствол кажется неизменным, он способен адаптироваться под влиянием опыта и обстоятельств.",
-                  num: "02",
-                },
-                {
-                  icon: "Leaf",
-                  title: "Крона — ваше поведение",
-                  desc: "Повседневные мысли, чувства и поступки. Крона наиболее изменчива, но определяется корнями и стволом — именно они задают потенциал её развития.",
-                  num: "03",
-                },
-              ].map((el, i) => (
-                <div key={i} className="bg-[#3d302b] rounded-2xl p-6 border border-[#5a3f35] hover:border-[#b07d62]/40 transition-colors duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#b07d62]/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name={el.icon} size={18} className="text-[#b07d62]" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-[#b07d62]/50 text-xs font-medium">{el.num}</span>
-                        <h3 className="font-medium text-[#faf7f4] text-sm">{el.title}</h3>
-                      </div>
-                      <p className="text-[#c4a99a] text-sm font-light leading-relaxed">{el.desc}</p>
-                    </div>
+                { icon: "Heart", title: "Личная жизнь", desc: "Понять, почему вы выбираете «не тех» или наступаете на одни и те же грабли. Конфликт между ценностями (корни) и поведением (крона) — часто главная причина неудач в отношениях." },
+                { icon: "Briefcase", title: "Карьера и бизнес", desc: "Найти ответ: «Почему я выгорел?» или «Почему бизнес не растёт?» Амбиции (крона) без нужных навыков (ствол) и расхождение с ценностями (корни) — типичная причина." },
+                { icon: "Users", title: "Отношения в паре", desc: "Нарисовать деревья — своё и партнёра — и наглядно увидеть точки соприкосновения и причины конфликтов. Часто мы боремся с «ветками», когда проблема в «корнях»." },
+                { icon: "Star", title: "Саморазвитие", desc: "Увидеть личность как целостную систему. Понять, какие качества — фундамент, а какие — надстройка. Перестать бороться с симптомами и начать работать с причинами." },
+              ].map((area, i) => (
+                <div key={i} className="bg-[#3d302b] rounded-2xl p-6 border border-[#5a3f35] hover:border-[#b07d62]/40 transition-colors duration-300 flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[#b07d62]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Icon name={area.icon} size={18} className="text-[#b07d62]" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-[#faf7f4] text-sm mb-2">{area.title}</h3>
+                    <p className="text-[#c4a99a] text-sm font-light leading-relaxed">{area.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+
+          {/* CTA */}
+          <div className="bg-[#b07d62]/10 border border-[#b07d62]/30 rounded-2xl p-10 text-center">
+            <p className="font-cormorant text-2xl lg:text-3xl font-light text-[#faf7f4] mb-4 leading-snug">
+              Я помогу вам нарисовать это дерево<br />и прочитать его карту
+            </p>
+            <p className="text-[#c4a99a] text-sm font-light mb-8 max-w-lg mx-auto leading-relaxed">
+              Вы перестанете бороться с симптомами и начнёте работать с причинами. Хотите узнать, как выглядит ваше дерево?
+            </p>
+            <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-10 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200 inline-flex items-center gap-2">
+              <Icon name="TreePine" size={16} />
+              Записаться на консультацию по методике
+            </button>
+          </div>
+
         </div>
       </section>
 
