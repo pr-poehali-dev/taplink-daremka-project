@@ -301,10 +301,10 @@ export default function Index() {
       {/* ABOUT */}
       <section className="py-24 bg-[#2c2420] text-[#faf7f4]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-12 items-center">
+          <div className="grid lg:grid-cols-[1.2fr_1fr_1fr] gap-12 items-center">
             {/* Photo */}
             <div className="flex justify-center lg:justify-start">
-              <div className="relative w-72 lg:w-full max-w-xs">
+              <div className="relative w-80 lg:w-full max-w-sm">
                 <div className="absolute inset-0 rounded-3xl bg-[#b07d62]/10 translate-x-3 translate-y-3" />
                 <img
                   src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/f381fa5a-c227-4257-b156-eae5f847ef2a.png"
