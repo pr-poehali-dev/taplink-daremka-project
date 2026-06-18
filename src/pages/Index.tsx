@@ -140,11 +140,8 @@ export default function Index() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
-          <img src={HERO_IMAGE} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#faf7f4] via-[#faf7f4]/50 to-transparent" />
-        </div>
-        <div className="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center w-full">
+          {/* Text */}
           <div>
             <div className="inline-flex items-center gap-2 bg-[#f0e6de] text-[#b07d62] text-xs font-medium px-4 py-2 rounded-full mb-8">
               <Icon name="MapPin" size={12} />
@@ -172,6 +169,22 @@ export default function Index() {
                   <div className="text-xs text-[#9c7b6e] mt-0.5">{label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+          {/* Photo */}
+          <div className="hidden lg:flex justify-end items-end h-full">
+            <div className="relative">
+              <div className="absolute -bottom-4 -left-4 w-full h-full rounded-[2.5rem] bg-[#f0e6de]" />
+              <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#b07d62]/10" />
+              <img
+                src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/1b0c4769-73cb-4344-8c7b-732d028fb491.jpg"
+                alt="Дарья Емикеева"
+                className="relative rounded-[2.5rem] w-[420px] h-[560px] object-cover object-top shadow-xl"
+              />
+              <div className="absolute bottom-8 -left-6 bg-[#faf7f4] rounded-2xl px-5 py-3 shadow-lg border border-[#e8ddd5]">
+                <div className="font-cormorant text-lg font-semibold text-[#2c2420]">Дарья Емикеева</div>
+                <div className="text-xs text-[#9c7b6e] mt-0.5">психолог · сексолог · коуч ICF</div>
+              </div>
             </div>
           </div>
         </div>
