@@ -181,9 +181,9 @@ export default function Index() {
                 alt="Дарья Емикеева"
                 className="relative rounded-[2.5rem] w-[520px] h-[680px] object-cover object-top shadow-xl"
               />
-              <div className="absolute bottom-8 -left-6 bg-[#faf7f4] rounded-2xl px-5 py-3 shadow-lg border border-[#e8ddd5]">
-                <div className="font-cormorant text-lg font-semibold text-[#2c2420]">Дарья Емикеева</div>
-                <div className="text-xs text-[#9c7b6e] mt-0.5">психолог · сексолог · коуч ICF</div>
+              <div className="absolute bottom-8 -left-8 bg-[#faf7f4] rounded-2xl px-6 py-4 shadow-lg border border-[#e8ddd5]">
+                <div className="font-cormorant text-2xl font-semibold text-[#2c2420]">Дарья Емикеева</div>
+                <div className="text-sm text-[#9c7b6e] mt-1">психолог · сексолог · коуч ICF</div>
               </div>
             </div>
           </div>
@@ -315,14 +315,14 @@ export default function Index() {
       <section className="py-24 bg-[#2c2420] text-[#faf7f4]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-[1.2fr_1fr_1fr] gap-12 items-center">
-            {/* Photo */}
+            {/* Room photo */}
             <div className="flex justify-center lg:justify-start">
               <div className="relative w-80 lg:w-full max-w-sm">
                 <div className="absolute inset-0 rounded-3xl bg-[#b07d62]/10 translate-x-3 translate-y-3" />
                 <img
-                  src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/1b0c4769-73cb-4344-8c7b-732d028fb491.jpg"
-                  alt="Дарья Емикеева"
-                  className="relative rounded-3xl w-full object-cover object-top"
+                  src={HERO_IMAGE}
+                  alt="Кабинет психолога"
+                  className="relative rounded-3xl w-full object-cover"
                   style={{ background: "#3d302b" }}
                 />
               </div>
