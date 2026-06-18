@@ -179,7 +179,7 @@ export default function Index() {
               <img
                 src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/1b0c4769-73cb-4344-8c7b-732d028fb491.jpg"
                 alt="Дарья Емикеева"
-                className="relative rounded-[2.5rem] w-[420px] h-[560px] object-cover object-top shadow-xl"
+                className="relative rounded-[2.5rem] w-[520px] h-[680px] object-cover object-top shadow-xl"
               />
               <div className="absolute bottom-8 -left-6 bg-[#faf7f4] rounded-2xl px-5 py-3 shadow-lg border border-[#e8ddd5]">
                 <div className="font-cormorant text-lg font-semibold text-[#2c2420]">Дарья Емикеева</div>
