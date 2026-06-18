@@ -438,8 +438,8 @@ export default function Index() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Запись</div>
-            <h2 className="font-cormorant text-4xl lg:text-5xl font-light text-[#2c2420] mb-6">Начнём разговор?</h2>
-            <p className="text-[#9c7b6e] leading-relaxed mb-10 font-light">
+            <h2 className="font-cormorant text-5xl lg:text-6xl font-light text-[#2c2420] mb-6">Начнём разговор?</h2>
+            <p className="text-[#9c7b6e] leading-relaxed mb-10 font-light text-base">
               Напишите мне — расскажите о своём запросе, и я предложу подходящий формат работы. Отвечаю в течение нескольких часов.
             </p>
             <div className="space-y-5 mb-10">
@@ -450,19 +450,19 @@ export default function Index() {
                 ["Video", "Яндекс Телемост", "Онлайн-сессии"],
               ].map(([icon, val, label], i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#f0e6de] flex items-center justify-center flex-shrink-0">
-                    <Icon name={icon as string} size={16} className="text-[#b07d62]" />
+                  <div className="w-12 h-12 rounded-full bg-[#f0e6de] flex items-center justify-center flex-shrink-0">
+                    <Icon name={icon as string} size={18} className="text-[#b07d62]" />
                   </div>
                   <div>
-                    <div className="text-[#2c2420] text-sm font-medium">{val}</div>
-                    <div className="text-[#9c7b6e] text-xs">{label}</div>
+                    <div className="text-[#2c2420] text-base font-medium">{val}</div>
+                    <div className="text-[#9c7b6e] text-sm">{label}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
           <div className="bg-[#f5ede6] rounded-2xl p-8 border border-[#e8ddd5]">
-            <div className="font-cormorant text-2xl font-light text-[#2c2420] mb-6">Оставить заявку</div>
+            <div className="font-cormorant text-3xl font-light text-[#2c2420] mb-6">Оставить заявку</div>
             <div className="space-y-4">
               {[
                 ["text", "Ваше имя", "Как вас зовут?"],
@@ -470,26 +470,26 @@ export default function Index() {
                 ["email", "Email", "your@email.com"],
               ].map(([type, label, placeholder], i) => (
                 <div key={i}>
-                  <label className="block text-[#9c7b6e] text-xs font-medium mb-2">{label}</label>
+                  <label className="block text-[#9c7b6e] text-sm font-medium mb-2">{label}</label>
                   <input
                     type={type as string}
                     placeholder={placeholder as string}
-                    className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-sm placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200"
+                    className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200"
                   />
                 </div>
               ))}
               <div>
-                <label className="block text-[#9c7b6e] text-xs font-medium mb-2">С чем хотите поработать?</label>
+                <label className="block text-[#9c7b6e] text-sm font-medium mb-2">С чем хотите поработать?</label>
                 <textarea
                   rows={3}
                   placeholder="Необязательно, но поможет подготовиться к встрече..."
-                  className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-sm placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200 resize-none"
+                  className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200 resize-none"
                 />
               </div>
-              <button className="w-full bg-[#b07d62] text-[#faf7f4] font-medium py-4 rounded-full hover:bg-[#9c6b51] transition-colors duration-200 mt-2">
+              <button className="w-full bg-[#b07d62] text-[#faf7f4] font-medium py-4 rounded-full hover:bg-[#9c6b51] transition-colors duration-200 mt-2 text-base">
                 Записаться на сессию
               </button>
-              <p className="text-[#9c7b6e] text-xs text-center font-light">
+              <p className="text-[#9c7b6e] text-sm text-center font-light">
                 Конфиденциальность гарантирована. Данные не передаются третьим лицам.
               </p>
             </div>
