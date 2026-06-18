@@ -307,7 +307,7 @@ export default function Index() {
               <div className="relative w-80 lg:w-full max-w-sm">
                 <div className="absolute inset-0 rounded-3xl bg-[#b07d62]/10 translate-x-3 translate-y-3" />
                 <img
-                  src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/f381fa5a-c227-4257-b156-eae5f847ef2a.png"
+                  src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/1b0c4769-73cb-4344-8c7b-732d028fb491.jpg"
                   alt="Дарья Емикеева"
                   className="relative rounded-3xl w-full object-cover object-top"
                   style={{ background: "#3d302b" }}
@@ -317,8 +317,8 @@ export default function Index() {
             {/* Text */}
             <div>
               <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Об авторе</div>
-              <h2 className="font-cormorant text-4xl lg:text-5xl font-light mb-6">Дарья Емикеева</h2>
-              <p className="text-[#c4a99a] leading-relaxed mb-8 font-light">
+              <h2 className="font-cormorant text-5xl lg:text-6xl font-light mb-6">Дарья Емикеева</h2>
+              <p className="text-[#c4a99a] leading-relaxed mb-8 font-light text-base">
                 Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям раскрыть потенциал и преодолеть внутренние барьеры — через индивидуальный подбор методов: МАК-терапию, коучинг, авторские методики и другие инструменты.
               </p>
               <div className="space-y-4">
@@ -329,8 +329,8 @@ export default function Index() {
                   ["Users", "Работаю индивидуально и в группах"],
                 ].map(([icon, text], i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <Icon name={icon as string} size={16} className="text-[#b07d62] flex-shrink-0" />
-                    <span className="text-[#c4a99a] text-sm font-light">{text}</span>
+                    <Icon name={icon as string} size={17} className="text-[#b07d62] flex-shrink-0" />
+                    <span className="text-[#c4a99a] text-base font-light">{text}</span>
                   </div>
                 ))}
               </div>
