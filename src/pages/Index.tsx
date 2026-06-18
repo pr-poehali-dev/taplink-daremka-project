@@ -301,7 +301,20 @@ export default function Index() {
       {/* ABOUT */}
       <section className="py-24 bg-[#2c2420] text-[#faf7f4]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-3 gap-12 items-center">
+            {/* Photo */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative w-72 lg:w-full max-w-xs">
+                <div className="absolute inset-0 rounded-3xl bg-[#b07d62]/10 translate-x-3 translate-y-3" />
+                <img
+                  src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/f381fa5a-c227-4257-b156-eae5f847ef2a.png"
+                  alt="Дарья Емикеева"
+                  className="relative rounded-3xl w-full object-cover object-top"
+                  style={{ background: "#3d302b" }}
+                />
+              </div>
+            </div>
+            {/* Text */}
             <div>
               <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Об авторе</div>
               <h2 className="font-cormorant text-4xl lg:text-5xl font-light mb-6">Дарья Емикеева</h2>
@@ -322,10 +335,11 @@ export default function Index() {
                 ))}
               </div>
             </div>
+            {/* Tags */}
             <div>
               <div className="text-[#c4a99a]/60 text-xs uppercase tracking-widest mb-6">С чем работаю</div>
               <div className="flex flex-wrap gap-2">
-                {["Личностный рост", "Карьерные цели", "Самооценка", "Выгорание", "Прокрастинация", "Страх перемен", "Внутренние блоки", "Лидерство", "Отношения", "Поиск смысла", "Управление стрессом", "Развитие потенциала", "Профессиональный рост", "МАК-терапия"].map((tag, i) => (
+                {["Личностный рост", "Карьерные цели", "Самооценка", "Выгорание", "Прокрастинация", "Страх перемен", "Внутренние блоки", "Лидерство", "Отношения", "Поиск смысла", "Управление стрессом", "Развитие потенциала", "Профессиональный рост"].map((tag, i) => (
                   <span key={i} className="border border-[#5a3f35] text-[#c4a99a] text-xs px-3 py-1.5 rounded-full font-light hover:border-[#b07d62] hover:text-[#b07d62] transition-colors duration-200 cursor-default">
                     {tag}
                   </span>
