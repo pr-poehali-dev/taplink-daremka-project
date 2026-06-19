@@ -320,10 +320,10 @@ export default function Index() {
               <div className="relative w-80 lg:w-full max-w-sm">
                 <div className="absolute inset-0 rounded-3xl bg-[#b07d62]/10 translate-x-3 translate-y-3" />
                 <img
-                  src={HERO_IMAGE}
-                  alt="Кабинет психолога"
-                  className="relative rounded-3xl w-full object-cover"
-                  style={{ background: "#3d302b" }}
+                  src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/abf4aa60-0b3b-41b8-bf07-4684fa25d168.jpg"
+                  alt="Дарья Емикеева"
+                  className="relative rounded-3xl w-full object-cover object-top"
+                  style={{ background: "#faf7f4" }}
                 />
               </div>
             </div>
