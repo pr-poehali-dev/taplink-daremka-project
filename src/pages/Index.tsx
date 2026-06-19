@@ -314,16 +314,26 @@ export default function Index() {
       {/* ABOUT */}
       <section className="py-24 bg-[#2c2420] text-[#faf7f4]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-[1.2fr_1fr_1fr] gap-12 items-center">
-            {/* Room photo */}
+          <div className="grid lg:grid-cols-[1fr_1fr_1.2fr_1fr] gap-10 items-center">
+            {/* Photo 1 */}
             <div className="flex justify-center lg:justify-start">
-              <div className="relative w-80 lg:w-full max-w-sm">
-                <div className="absolute inset-0 rounded-3xl bg-[#b07d62]/10 translate-x-3 translate-y-3" />
+              <div className="relative w-72 lg:w-full max-w-xs">
                 <img
                   src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/abf4aa60-0b3b-41b8-bf07-4684fa25d168.jpg"
                   alt="Дарья Емикеева"
-                  className="relative rounded-3xl w-full object-cover object-top"
-                  style={{ background: "#faf7f4" }}
+                  className="w-full object-cover object-top"
+                  style={{ borderRadius: "40% 40% 50% 50% / 30% 30% 50% 50%", boxShadow: "0 20px 60px rgba(0,0,0,0.5)", maskImage: "radial-gradient(ellipse 85% 90% at 50% 45%, black 60%, transparent 100%)", WebkitMaskImage: "radial-gradient(ellipse 85% 90% at 50% 45%, black 60%, transparent 100%)" }}
+                />
+              </div>
+            </div>
+            {/* Photo 2 */}
+            <div className="hidden lg:flex justify-center">
+              <div className="relative w-full max-w-xs">
+                <img
+                  src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/91b23862-17a6-4e51-bf34-8778cbfc4cff.jpg"
+                  alt="Дарья Емикеева"
+                  className="w-full object-cover object-top"
+                  style={{ borderRadius: "50% 50% 40% 40% / 40% 40% 30% 30%", boxShadow: "0 20px 60px rgba(0,0,0,0.5)", maskImage: "radial-gradient(ellipse 85% 88% at 50% 50%, black 55%, transparent 100%)", WebkitMaskImage: "radial-gradient(ellipse 85% 88% at 50% 50%, black 55%, transparent 100%)" }}
                 />
               </div>
             </div>
