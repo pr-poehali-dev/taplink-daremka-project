@@ -303,9 +303,9 @@ export default function Index() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#e8ddd5] rounded-2xl overflow-hidden">
           {steps.map((s, i) => (
             <div key={i} className="bg-[#faf7f4] p-8 group hover:bg-[#f5ede6] transition-colors duration-200">
-              <div className="font-cormorant text-5xl font-light text-[#e8ddd5] group-hover:text-[#d4b8ac] transition-colors duration-200 mb-4 leading-none">{s.num}</div>
-              <h3 className="font-medium text-[#2c2420] mb-3 text-sm">{s.title}</h3>
-              <p className="text-[#9c7b6e] text-xs leading-relaxed font-light">{s.desc}</p>
+              <div className="font-cormorant text-6xl font-light text-[#d4b8ac] group-hover:text-[#b07d62] transition-colors duration-200 mb-4 leading-none">{s.num}</div>
+              <h3 className="font-semibold text-[#2c2420] mb-3 text-base">{s.title}</h3>
+              <p className="text-[#7a5f54] text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
