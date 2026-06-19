@@ -322,7 +322,7 @@ export default function Index() {
                   src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/91b23862-17a6-4e51-bf34-8778cbfc4cff.jpg"
                   alt="Дарья Емикеева"
                   className="w-full object-cover object-top"
-                  style={{ borderRadius: "12px", boxShadow: "0 20px 60px rgba(0,0,0,0.5)", maskImage: "linear-gradient(to bottom, black 60%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)", maskComposite: "intersect", WebkitMaskComposite: "source-in" }}
+                  style={{ borderRadius: "12px", boxShadow: "0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(0,0,0,0.4)", maskImage: "linear-gradient(to bottom, black 60%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)", maskComposite: "intersect", WebkitMaskComposite: "source-in" }}
                 />
               </div>
             </div>
