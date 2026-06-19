@@ -105,7 +105,7 @@ export default function Index() {
   const [showEthics, setShowEthics] = useState(false);
   const ethicsRef = useRef<HTMLDivElement>(null);
 
-  const [form, setForm] = useState({ name: '', contact: '', email: '', message: '' });
+  const [form, setForm] = useState({ name: '', phone: '', contact: '', email: '', message: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const handleFormSubmit = async () => {
@@ -119,7 +119,7 @@ export default function Index() {
       });
       if (res.ok) {
         setFormStatus('success');
-        setForm({ name: '', contact: '', email: '', message: '' });
+        setForm({ name: '', phone: '', contact: '', email: '', message: '' });
       } else {
         setFormStatus('error');
       }
@@ -540,6 +540,17 @@ export default function Index() {
                     placeholder="Как вас зовут?"
                     value={form.name}
                     onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                    className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[#9c7b6e] text-sm font-medium mb-2">Номер телефона</label>
+                  <input
+                    type="tel"
+                    autoComplete="tel"
+                    placeholder="+7 (___) ___-__-__"
+                    value={form.phone}
+                    onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
                     className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200"
                   />
                 </div>
