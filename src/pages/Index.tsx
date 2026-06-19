@@ -304,8 +304,8 @@ export default function Index() {
           {steps.map((s, i) => (
             <div key={i} className="bg-[#faf7f4] p-8 group hover:bg-[#f5ede6] transition-colors duration-200">
               <div className="font-cormorant text-6xl font-light text-[#d4b8ac] group-hover:text-[#b07d62] transition-colors duration-200 mb-4 leading-none">{s.num}</div>
-              <h3 className="font-semibold text-[#2c2420] mb-3 text-base">{s.title}</h3>
-              <p className="text-[#7a5f54] text-sm leading-relaxed">{s.desc}</p>
+              <h3 className="font-semibold text-[#2c2420] mb-3 text-lg">{s.title}</h3>
+              <p className="text-[#7a5f54] text-base leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
