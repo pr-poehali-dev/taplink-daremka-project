@@ -547,6 +547,8 @@ export default function Index() {
                   <label className="block text-[#9c7b6e] text-sm font-medium mb-2">Телефон / Telegram</label>
                   <input
                     type="text"
+                    inputMode="text"
+                    autoComplete="off"
                     placeholder="+7 или @username"
                     value={form.contact}
                     onChange={e => setForm(f => ({ ...f, contact: e.target.value }))}
