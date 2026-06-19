@@ -174,7 +174,6 @@ export default function Index() {
           {/* Photo */}
           <div className="hidden lg:flex justify-end items-end h-full">
             <div className="relative">
-              <div className="absolute -bottom-4 -left-4 w-full h-full rounded-[2.5rem] bg-[#f0e6de]" />
               <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#b07d62]/10" />
               <img
                 src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/1b0c4769-73cb-4344-8c7b-732d028fb491.jpg"
