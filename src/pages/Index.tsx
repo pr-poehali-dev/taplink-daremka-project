@@ -475,17 +475,21 @@ export default function Index() {
             </p>
             <div className="space-y-5 mb-10">
               {[
-                ["Phone", "+7 (918) 537-93-05", "Телефон · WhatsApp"],
-                ["Mail", "daremka-5@mail.ru", "Email"],
-                ["MapPin", "Москва, очно по договорённости", "Очные встречи"],
-                ["Video", "Яндекс Телемост", "Онлайн-сессии"],
-              ].map(([icon, val, label], i) => (
+                ["Phone", "+7 (918) 537-93-05", "Телефон · WhatsApp", "tel:+79185379305"],
+                ["Mail", "daremka-5@mail.ru", "Email", "https://e.mail.ru/inbox/?back=1"],
+                ["MapPin", "Москва, очно по договорённости", "Очные встречи", null],
+                ["Video", "Яндекс Телемост", "Онлайн-сессии", null],
+              ].map(([icon, val, label, href], i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#f0e6de] flex items-center justify-center flex-shrink-0">
                     <Icon name={icon as string} size={18} className="text-[#b07d62]" />
                   </div>
                   <div>
-                    <div className="text-[#2c2420] text-base font-medium">{val}</div>
+                    {href ? (
+                      <a href={href as string} target="_blank" rel="noopener noreferrer" className="text-[#2c2420] text-base font-medium hover:text-[#b07d62] transition-colors duration-200">{val}</a>
+                    ) : (
+                      <div className="text-[#2c2420] text-base font-medium">{val}</div>
+                    )}
                     <div className="text-[#9c7b6e] text-sm">{label}</div>
                   </div>
                 </div>
