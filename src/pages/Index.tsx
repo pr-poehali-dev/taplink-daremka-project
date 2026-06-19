@@ -544,12 +544,11 @@ export default function Index() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[#9c7b6e] text-sm font-medium mb-2">Телефон / Telegram</label>
+                  <label className="block text-[#9c7b6e] text-sm font-medium mb-2">Ник в Telegram</label>
                   <input
                     type="text"
-                    inputMode="text"
-                    autoComplete="off"
-                    placeholder="+7 или @username"
+                    autoComplete="username"
+                    placeholder="@username"
                     value={form.contact}
                     onChange={e => setForm(f => ({ ...f, contact: e.target.value }))}
                     className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200"
