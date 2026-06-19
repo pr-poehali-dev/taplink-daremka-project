@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
+const SEND_APPLICATION_URL = "https://functions.poehali.dev/e7cce5b4-87be-476e-8b9a-1c94b47ca055";
+
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/files/17cfd4d4-3b71-432c-9c2e-565eed3530ca.jpg";
 
 const approaches = [
@@ -102,6 +104,29 @@ export default function Index() {
   const [openEthics, setOpenEthics] = useState<number | null>(null);
   const [showEthics, setShowEthics] = useState(false);
   const ethicsRef = useRef<HTMLDivElement>(null);
+
+  const [form, setForm] = useState({ name: '', contact: '', email: '', message: '' });
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleFormSubmit = async () => {
+    if (!form.name.trim() || !form.contact.trim()) return;
+    setFormStatus('loading');
+    try {
+      const res = await fetch(SEND_APPLICATION_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setFormStatus('success');
+        setForm({ name: '', contact: '', email: '', message: '' });
+      } else {
+        setFormStatus('error');
+      }
+    } catch {
+      setFormStatus('error');
+    }
+  };
 
   const faqs: [string, string][] = [
     ["Что такое МАК-терапия?", "МАК (метафорические ассоциативные карты) — это инструмент для работы с подсознанием. Карты помогают мягко и образно исследовать внутренний мир, найти ресурсы и решения там, где слова не справляются."],
@@ -498,36 +523,70 @@ export default function Index() {
           </div>
           <div className="bg-[#f5ede6] rounded-2xl p-8 border border-[#e8ddd5]">
             <div className="font-cormorant text-3xl font-light text-[#2c2420] mb-6">Оставить заявку</div>
-            <div className="space-y-4">
-              {[
-                ["text", "Ваше имя", "Как вас зовут?"],
-                ["tel", "Телефон / Telegram", "+7 или @username"],
-                ["email", "Email", "your@email.com"],
-              ].map(([type, label, placeholder], i) => (
-                <div key={i}>
-                  <label className="block text-[#9c7b6e] text-sm font-medium mb-2">{label}</label>
+            {formStatus === 'success' ? (
+              <div className="text-center py-8">
+                <div className="text-[#b07d62] text-5xl mb-4">✓</div>
+                <div className="font-cormorant text-2xl text-[#2c2420] mb-2">Заявка отправлена!</div>
+                <p className="text-[#9c7b6e] text-sm">Дарья свяжется с вами в ближайшее время.</p>
+                <button onClick={() => setFormStatus('idle')} className="mt-6 text-[#b07d62] text-sm underline">Отправить ещё раз</button>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-[#9c7b6e] text-sm font-medium mb-2">Ваше имя</label>
                   <input
-                    type={type as string}
-                    placeholder={placeholder as string}
+                    type="text"
+                    placeholder="Как вас зовут?"
+                    value={form.name}
+                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                     className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200"
                   />
                 </div>
-              ))}
-              <div>
-                <label className="block text-[#9c7b6e] text-sm font-medium mb-2">С чем хотите поработать?</label>
-                <textarea
-                  rows={3}
-                  placeholder="Необязательно, но поможет подготовиться к встрече..."
-                  className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200 resize-none"
-                />
+                <div>
+                  <label className="block text-[#9c7b6e] text-sm font-medium mb-2">Телефон / Telegram</label>
+                  <input
+                    type="tel"
+                    placeholder="+7 или @username"
+                    value={form.contact}
+                    onChange={e => setForm(f => ({ ...f, contact: e.target.value }))}
+                    className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[#9c7b6e] text-sm font-medium mb-2">Email</label>
+                  <input
+                    type="email"
+                    placeholder="your@email.com"
+                    value={form.email}
+                    onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+                    className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[#9c7b6e] text-sm font-medium mb-2">С чем хотите поработать?</label>
+                  <textarea
+                    rows={3}
+                    placeholder="Необязательно, но поможет подготовиться к встрече..."
+                    value={form.message}
+                    onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+                    className="w-full bg-[#faf7f4] border border-[#e8ddd5] rounded-xl px-4 py-3 text-[#2c2420] text-base placeholder-[#c4a99a] focus:outline-none focus:border-[#b07d62] transition-colors duration-200 resize-none"
+                  />
+                </div>
+                {formStatus === 'error' && (
+                  <p className="text-red-500 text-sm text-center">Что-то пошло не так. Попробуйте ещё раз.</p>
+                )}
+                <button
+                  onClick={handleFormSubmit}
+                  disabled={formStatus === 'loading' || !form.name.trim() || !form.contact.trim()}
+                  className="w-full bg-[#b07d62] text-[#faf7f4] font-medium py-4 rounded-full hover:bg-[#9c6b51] transition-colors duration-200 mt-2 text-base disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {formStatus === 'loading' ? 'Отправляем...' : 'Записаться на сессию'}
+                </button>
+                <p className="text-[#9c7b6e] text-sm text-center font-light">
+                  Конфиденциальность гарантирована. Данные не передаются третьим лицам.
+                </p>
               </div>
-              <button className="w-full bg-[#b07d62] text-[#faf7f4] font-medium py-4 rounded-full hover:bg-[#9c6b51] transition-colors duration-200 mt-2 text-base">
-                Записаться на сессию
-              </button>
-              <p className="text-[#9c7b6e] text-sm text-center font-light">
-                Конфиденциальность гарантирована. Данные не передаются третьим лицам.
-              </p>
-            </div>
+            )}
           </div>
         </div>
       </section>
