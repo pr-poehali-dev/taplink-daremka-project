@@ -197,14 +197,14 @@ export default function Index() {
             </div>
           </div>
           {/* Photo */}
-          <div className="hidden lg:flex justify-end items-end h-full">
+          <div className="flex justify-center lg:justify-end items-end h-full order-first lg:order-last">
             <div className="relative">
               <div className="absolute -bottom-4 -left-4 w-full h-full rounded-[2.5rem] bg-[#f0e6de]" />
               <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#b07d62]/10" />
               <img
                 src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/1b0c4769-73cb-4344-8c7b-732d028fb491.jpg"
                 alt="Дарья Емикеева"
-                className="relative rounded-[2.5rem] w-[520px] h-[680px] object-cover object-top shadow-xl"
+                className="relative rounded-[2.5rem] w-[320px] h-[420px] lg:w-[520px] lg:h-[680px] object-cover object-top shadow-xl"
               />
               <div className="absolute bottom-8 -left-8 bg-[#faf7f4] rounded-2xl px-6 py-4 shadow-lg border border-[#e8ddd5]">
                 <div className="font-cormorant text-2xl font-semibold text-[#2c2420]">Дарья Емикеева</div>
