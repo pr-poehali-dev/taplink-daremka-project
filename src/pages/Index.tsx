@@ -650,7 +650,12 @@ export default function Index() {
             </div>
             <span className="font-cormorant text-[#faf7f4] font-medium tracking-wide">Дарья Емикеева · психолог · сексолог · коуч</span>
           </div>
-          <div className="text-[#c4a99a]/40 text-xs font-light">© 2024 · Все встречи конфиденциальны</div>
+          <div className="text-[#c4a99a]/40 text-xs font-light">
+            © 2024 · Все встречи конфиденциальны ·{" "}
+            <a href="/privacy" className="hover:text-[#b07d62] transition-colors duration-200 underline underline-offset-2">
+              Политика конфиденциальности
+            </a>
+          </div>
           <button
             onClick={() => {
               setShowEthics(true);
