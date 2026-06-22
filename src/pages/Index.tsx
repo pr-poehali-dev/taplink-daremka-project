@@ -415,7 +415,9 @@ export default function Index() {
                 {p.features.map((f, fi) => (
                   <li key={fi} className={`flex items-center gap-2 text-sm font-light ${p.highlight ? "text-[#faf7f4]" : "text-[#7a5f54]"}`}>
                     <Icon name="Check" size={14} className={p.highlight ? "text-[#faf7f4]" : "text-[#b07d62]"} />
-                    {f}
+                    {f === "Конфиденциально" ? (
+                      <a href="/privacy" className="underline underline-offset-2 hover:opacity-70 transition-opacity">{f}</a>
+                    ) : f}
                   </li>
                 ))}
               </ul>
