@@ -173,8 +173,8 @@ export default function Index() {
               Москва · Онлайн через Яндекс Телемост
             </div>
             <h1 className="font-cormorant text-5xl lg:text-6xl font-light leading-snug mb-6 text-[#2c2420]">
-              Расти. Меняться.<br />Становиться<br />
-              <em className="font-semibold text-[#b07d62] not-italic">собой</em>
+              <span className="bg-[#b07d62] text-[#faf7f4] px-3 py-1 rounded-sm inline-block">Расти. Меняться.<br />Становиться<br />
+              <em className="font-semibold not-italic text-7xl lg:text-8xl">собой</em></span>
             </h1>
             <p className="text-[#7a5f54] text-lg leading-relaxed mb-10 max-w-md font-light">
               Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям расти и меняться, используя широкий арсенал методов — от МАК-терапии до авторских методик.
