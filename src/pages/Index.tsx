@@ -378,7 +378,7 @@ export default function Index() {
               <div className="text-[#c4a99a]/60 text-xs uppercase tracking-widest mb-6">С чем работаю</div>
               <div className="flex flex-wrap gap-2">
                 {["Личностный рост", "Карьерные цели", "Самооценка", "Выгорание", "Прокрастинация", "Страх перемен", "Внутренние блоки", "Лидерство", "Отношения", "Поиск смысла", "Управление стрессом", "Развитие потенциала", "Профессиональный рост"].map((tag, i) => (
-                  <span key={i} className="border border-[#5a3f35] text-[#c4a99a] text-xs px-3 py-1.5 rounded-full font-light hover:border-[#b07d62] hover:text-[#b07d62] transition-colors duration-200 cursor-default">
+                  <span key={i} className="border border-[#5a3f35] text-[#c4a99a] text-sm px-5 py-2 rounded-full font-light hover:border-[#b07d62] hover:text-[#b07d62] transition-colors duration-200 cursor-default">
                     {tag}
                   </span>
                 ))}
