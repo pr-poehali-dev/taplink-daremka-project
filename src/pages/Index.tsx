@@ -354,7 +354,7 @@ export default function Index() {
             </div>
             {/* Text */}
             <div>
-              <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Об авторе</div>
+              <div className="text-[#b07d62] text-sm font-medium uppercase tracking-widest mb-4">Об авторе</div>
               <h2 className="font-cormorant text-5xl lg:text-6xl font-light mb-6">Дарья Емикеева</h2>
               <p className="text-[#c4a99a] leading-relaxed mb-8 font-light text-base">
                 Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям раскрыть потенциал и преодолеть внутренние барьеры — через индивидуальный подбор методов: МАК-терапию, коучинг, авторские методики и другие инструменты.
@@ -375,7 +375,7 @@ export default function Index() {
             </div>
             {/* Tags */}
             <div>
-              <div className="text-[#c4a99a]/60 text-xs uppercase tracking-widest mb-6">С чем работаю</div>
+              <div className="text-[#c4a99a]/60 text-sm uppercase tracking-widest mb-6">С чем работаю</div>
               <div className="flex flex-wrap gap-2">
                 {["Личностный рост", "Карьерные цели", "Самооценка", "Выгорание", "Прокрастинация", "Страх перемен", "Внутренние блоки", "Лидерство", "Отношения", "Поиск смысла", "Управление стрессом", "Развитие потенциала", "Профессиональный рост"].map((tag, i) => (
                   <span key={i} className="border border-[#5a3f35] text-[#c4a99a] text-sm px-5 py-2 rounded-full font-light hover:border-[#b07d62] hover:text-[#b07d62] transition-colors duration-200 cursor-default">
