@@ -348,6 +348,12 @@ export default function Index() {
                     <Icon name="Target" size={14} className="text-[#b07d62] flex-shrink-0 mt-0.5" />
                     <p className="text-[#c4a99a]/80 text-xs font-light leading-relaxed">{item.goal}</p>
                   </div>
+                  <button
+                    onClick={() => scrollTo("contacts")}
+                    className="w-full mt-1 border border-[#b07d62]/50 text-[#b07d62] text-sm font-medium py-2.5 rounded-full hover:bg-[#b07d62] hover:text-[#faf7f4] transition-all duration-200"
+                  >
+                    Записаться
+                  </button>
                 </div>
               ))}
             </div>
