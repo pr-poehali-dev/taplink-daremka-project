@@ -302,6 +302,57 @@ export default function Index() {
             </div>
           </div>
 
+          {/* Анкеты */}
+          <div className="mb-16">
+            <div className="text-[#c4a99a]/60 text-xs uppercase tracking-widest text-center mb-8">Инструменты методики</div>
+            <div className="grid md:grid-cols-3 gap-5">
+              {[
+                {
+                  icon: "User",
+                  tag: "Самоанализ",
+                  title: "Архитектура личности",
+                  for: "Для тех, кто хочет лучше понять себя",
+                  desc: "Помогает проанализировать свои ценности (Корни), характер (Ствол) и внешнее поведение (Крона).",
+                  goal: "Найти источник личных проблем и определить зоны роста",
+                },
+                {
+                  icon: "Heart",
+                  tag: "Поиск пары",
+                  title: "Портрет потенциального партнёра",
+                  for: "Для тех, кто ищет серьёзные отношения",
+                  desc: "Описать идеального партнёра через его фундаментальные ценности, характер и повседневные привычки по модели дерева.",
+                  goal: "Перейти от поверхностных требований к глубокому пониманию совместимости",
+                },
+                {
+                  icon: "Briefcase",
+                  tag: "Корпоративное дерево",
+                  title: "Диагностика бизнес-структуры",
+                  for: "Для руководителей, владельцев бизнеса и HR",
+                  desc: "Анализирует миссию и культуру (Корни), управленческую структуру и финансы (Ствол), продукты и маркетинг (Крона).",
+                  goal: "Выявить скрытые конфликты в бизнесе и найти точки роста",
+                },
+              ].map((item, i) => (
+                <div key={i} className="bg-[#3d302b] rounded-2xl p-6 border border-[#5a3f35] hover:border-[#b07d62]/40 transition-colors duration-300 flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-[#b07d62]/20 flex items-center justify-center flex-shrink-0">
+                      <Icon name={item.icon} size={18} className="text-[#b07d62]" />
+                    </div>
+                    <span className="text-[#b07d62] text-xs font-medium uppercase tracking-widest">{item.tag}</span>
+                  </div>
+                  <div>
+                    <h3 className="font-cormorant text-xl font-light text-[#faf7f4] mb-1 leading-snug">{item.title}</h3>
+                    <p className="text-[#c4a99a]/60 text-xs font-light">{item.for}</p>
+                  </div>
+                  <p className="text-[#c4a99a] text-sm font-light leading-relaxed flex-1">{item.desc}</p>
+                  <div className="border-t border-[#5a3f35] pt-4 flex items-start gap-2">
+                    <Icon name="Target" size={14} className="text-[#b07d62] flex-shrink-0 mt-0.5" />
+                    <p className="text-[#c4a99a]/80 text-xs font-light leading-relaxed">{item.goal}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* CTA */}
           <div className="bg-[#faf7f4] border border-[#e8ddd5] rounded-2xl p-10 text-center">
             <p className="font-cormorant text-2xl lg:text-3xl font-light text-[#2c2420] mb-4 leading-snug">
