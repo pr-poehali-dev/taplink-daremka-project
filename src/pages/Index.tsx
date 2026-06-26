@@ -369,16 +369,12 @@ export default function Index() {
 
           {/* CTA */}
           <div className="bg-[#faf7f4] border border-[#e8ddd5] rounded-2xl p-10 text-center">
-            <p className="font-cormorant text-2xl lg:text-3xl font-light text-[#2c2420] mb-4 leading-snug">
+            <p className="font-cormorant text-4xl lg:text-5xl font-light text-[#2c2420] mb-4 leading-snug">
               Я помогу вам нарисовать это дерево<br />и прочитать его карту
             </p>
-            <p className="text-[#9c7b6e] text-sm font-light mb-8 max-w-lg mx-auto leading-relaxed">
+            <p className="text-[#9c7b6e] text-base font-light max-w-lg mx-auto leading-relaxed">
               Вы перестанете бороться с симптомами и начнёте работать с причинами. Хотите узнать, как выглядит ваше дерево?
             </p>
-            <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-10 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200 inline-flex items-center gap-2">
-              <Icon name="TreePine" size={16} />
-              Записаться на консультацию по методике
-            </button>
           </div>
 
         </div>
