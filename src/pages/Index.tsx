@@ -509,14 +509,14 @@ export default function Index() {
               <div key={i} className="bg-[#faf7f4] rounded-xl overflow-hidden border border-[#e8ddd5]">
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left"
+                  className="w-full flex items-center justify-between px-8 py-6 text-left"
                 >
-                  <span className="font-medium text-[#2c2420] text-sm pr-4">{q}</span>
-                  <Icon name={openFaq === i ? "ChevronUp" : "ChevronDown"} size={16} className="text-[#b07d62] flex-shrink-0" />
+                  <span className="font-medium text-[#2c2420] text-base pr-4">{q}</span>
+                  <Icon name={openFaq === i ? "ChevronUp" : "ChevronDown"} size={18} className="text-[#b07d62] flex-shrink-0" />
                 </button>
                 {openFaq === i && (
-                  <div className="px-6 pb-5">
-                    <p className="text-[#9c7b6e] text-sm leading-relaxed font-light">{a}</p>
+                  <div className="px-8 pb-7">
+                    <p className="text-[#9c7b6e] text-base leading-relaxed font-light">{a}</p>
                   </div>
                 )}
               </div>
