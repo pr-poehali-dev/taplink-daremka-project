@@ -368,13 +368,18 @@ export default function Index() {
           </div>
 
           {/* CTA */}
-          <div className="bg-[#faf7f4] border border-[#e8ddd5] rounded-2xl p-10 text-center">
-            <p className="font-cormorant text-4xl lg:text-5xl font-light text-[#2c2420] mb-4 leading-snug">
-              Я помогу вам нарисовать это дерево<br />и прочитать его карту
-            </p>
-            <p className="text-[#9c7b6e] text-base font-light max-w-lg mx-auto leading-relaxed">
-              Вы перестанете бороться с симптомами и начнёте работать с причинами. Хотите узнать, как выглядит ваше дерево?
-            </p>
+          <div className="rounded-3xl p-12 text-center relative overflow-hidden" style={{background: "linear-gradient(135deg, #f5ede6 0%, #faf7f4 50%, #f0e6de 100%)"}}>
+            <div className="absolute inset-0 pointer-events-none" style={{background: "radial-gradient(ellipse at 70% 20%, rgba(176,125,98,0.10) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(176,125,98,0.07) 0%, transparent 50%)"}} />
+            <div className="relative">
+              <div className="text-[#b07d62]/40 font-cormorant text-7xl leading-none mb-2 select-none">"</div>
+              <p className="font-cormorant text-4xl lg:text-5xl font-light text-[#2c2420] leading-tight mb-6" style={{fontStyle: "italic", letterSpacing: "-0.01em"}}>
+                Я помогу вам нарисовать<br />это дерево<br />
+                <span className="text-[#b07d62]">и прочитать его карту</span>
+              </p>
+              <p className="text-[#9c7b6e] text-base font-light max-w-lg mx-auto leading-relaxed">
+                Вы перестанете бороться с симптомами и начнёте работать с причинами. Хотите узнать, как выглядит ваше дерево?
+              </p>
+            </div>
           </div>
 
         </div>
