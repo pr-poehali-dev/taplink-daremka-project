@@ -229,14 +229,19 @@ export default function Index() {
             <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Методы работы</div>
             <h2 className="font-cormorant text-4xl lg:text-5xl font-light text-[#2c2420]">Подходы и направления</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-col gap-4">
             {approaches.map((a, i) => (
-              <div key={i} className="bg-[#faf7f4] rounded-2xl p-7 hover:shadow-md hover:shadow-[#b07d62]/10 transition-all duration-300 group border border-transparent hover:border-[#e8ddd5]">
-                <div className="w-10 h-10 rounded-full bg-[#f0e6de] flex items-center justify-center mb-5 group-hover:bg-[#b07d62]/20 transition-colors duration-200">
-                  <Icon name={a.icon} size={18} className="text-[#b07d62]" />
+              <div key={i} className={`flex items-center gap-8 bg-[#faf7f4] rounded-2xl p-7 hover:shadow-md hover:shadow-[#b07d62]/10 transition-all duration-300 group border border-transparent hover:border-[#e8ddd5] ${i % 2 === 1 ? "flex-row-reverse" : ""}`}>
+                <div className="w-14 h-14 rounded-full bg-[#f0e6de] flex items-center justify-center flex-shrink-0 group-hover:bg-[#b07d62]/20 transition-colors duration-200">
+                  <Icon name={a.icon} size={22} className="text-[#b07d62]" />
                 </div>
-                <h3 className="font-medium text-[#2c2420] mb-3 leading-snug">{a.title}</h3>
-                <p className="text-[#9c7b6e] text-sm leading-relaxed font-light">{a.desc}</p>
+                <div className={`flex-1 ${i % 2 === 1 ? "text-right" : ""}`}>
+                  <h3 className="font-medium text-[#2c2420] mb-1 leading-snug text-base">{a.title}</h3>
+                  <p className="text-[#9c7b6e] text-sm leading-relaxed font-light">{a.desc}</p>
+                </div>
+                <div className="text-[#b07d62]/20 font-cormorant text-5xl font-light leading-none select-none flex-shrink-0">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
               </div>
             ))}
           </div>
