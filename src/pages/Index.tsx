@@ -108,6 +108,11 @@ export default function Index() {
   const [form, setForm] = useState({ name: '', phone: '', contact: '', email: '', message: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
+  const scrollToContacts = (preset?: string) => {
+    if (preset) setForm(f => ({ ...f, message: preset }));
+    document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const handleFormSubmit = async () => {
     if (!form.name.trim() || !form.contact.trim()) return;
     setFormStatus('loading');
@@ -314,6 +319,7 @@ export default function Index() {
                   for: "Для тех, кто хочет лучше понять себя",
                   desc: "Помогает проанализировать свои ценности (Корни), характер (Ствол) и внешнее поведение (Крона).",
                   goal: "Найти источник личных проблем и определить зоны роста",
+                  preset: "Интересует анкета «Архитектура личности» (Самоанализ)",
                 },
                 {
                   icon: "Heart",
@@ -322,6 +328,7 @@ export default function Index() {
                   for: "Для тех, кто ищет серьёзные отношения",
                   desc: "Описать идеального партнёра через его фундаментальные ценности, характер и повседневные привычки по модели дерева.",
                   goal: "Перейти от поверхностных требований к глубокому пониманию совместимости",
+                  preset: "Интересует анкета «Портрет потенциального партнёра» (Поиск пары)",
                 },
                 {
                   icon: "Briefcase",
@@ -330,6 +337,7 @@ export default function Index() {
                   for: "Для руководителей, владельцев бизнеса и HR",
                   desc: "Анализирует миссию и культуру (Корни), управленческую структуру и финансы (Ствол), продукты и маркетинг (Крона).",
                   goal: "Выявить скрытые конфликты в бизнесе и найти точки роста",
+                  preset: "Интересует анкета «Диагностика бизнес-структуры» (Корпоративное дерево)",
                 },
               ].map((item, i) => (
                 <div key={i} className="bg-[#3d302b] rounded-2xl p-6 border border-[#5a3f35] hover:border-[#b07d62]/40 transition-colors duration-300 flex flex-col gap-4">
@@ -349,7 +357,7 @@ export default function Index() {
                     <p className="text-[#c4a99a]/80 text-xs font-light leading-relaxed">{item.goal}</p>
                   </div>
                   <button
-                    onClick={() => scrollTo("contacts")}
+                    onClick={() => scrollToContacts(item.preset)}
                     className="w-full mt-1 border border-[#b07d62]/50 text-[#b07d62] text-sm font-medium py-2.5 rounded-full hover:bg-[#b07d62] hover:text-[#faf7f4] transition-all duration-200"
                   >
                     Записаться
