@@ -371,7 +371,6 @@ export default function Index() {
           <div className="rounded-3xl p-12 text-center relative overflow-hidden" style={{background: "linear-gradient(135deg, #f5ede6 0%, #faf7f4 50%, #f0e6de 100%)"}}>
             <div className="absolute inset-0 pointer-events-none" style={{background: "radial-gradient(ellipse at 70% 20%, rgba(176,125,98,0.10) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(176,125,98,0.07) 0%, transparent 50%)"}} />
             <div className="relative">
-              <div className="text-[#b07d62]/40 font-cormorant text-7xl leading-none mb-2 select-none">"</div>
               <p className="font-cormorant text-4xl lg:text-5xl font-light text-[#2c2420] leading-tight mb-6" style={{fontStyle: "italic", letterSpacing: "-0.01em"}}>
                 Я помогу вам нарисовать<br />это дерево<br />
                 <span className="text-[#b07d62]">и прочитать его карту</span>
