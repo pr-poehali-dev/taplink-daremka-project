@@ -547,21 +547,13 @@ export default function Index() {
             ))}
           </div>
 
-          <div className="bg-[#f5ede6] rounded-2xl p-7 border border-[#e8ddd5] mb-6">
-            <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Стоимость</div>
-            <p className="text-[#7a5f54] font-light leading-relaxed mb-5">
-              Стоимость консультационных услуг для бизнеса варьируется индивидуально и обсуждается после первичного запроса. На итоговую цену влияет ряд факторов:
+          <div className="mb-6 px-1">
+            <p className="text-[#9c7b6e] font-light text-sm leading-relaxed mb-3">
+              * Стоимость консультационных услуг для бизнеса варьируется индивидуально и обсуждается после первичного запроса. На итоговую цену влияет ряд факторов:
             </p>
-            <div className="space-y-3">
-              {[
-                ["Award", "Опыт и квалификация специалиста"],
-                ["BarChart2", "Объём работ и масштаб компании"],
-                ["MapPin", "Регион и формат предоставления услуг"],
-              ].map(([icon, text], i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <Icon name={icon as string} size={16} className="text-[#b07d62] flex-shrink-0" />
-                  <span className="text-[#7a5f54] text-sm font-light">{text}</span>
-                </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-1">
+              {["Объём работ и масштаб компании", "Регион и формат предоставления услуг"].map((text, i) => (
+                <span key={i} className="text-[#9c7b6e] text-sm font-light">· {text}</span>
               ))}
             </div>
           </div>
