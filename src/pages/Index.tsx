@@ -101,6 +101,7 @@ const ethicsChapters = [
 
 export default function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openEthics, setOpenEthics] = useState<number | null>(null);
   const [showEthics, setShowEthics] = useState(false);
   const ethicsRef = useRef<HTMLDivElement>(null);
@@ -186,10 +187,31 @@ export default function Index() {
               </button>
             ))}
           </div>
-          <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#9c6b51] transition-colors duration-200">
-            Записаться
-          </button>
+          <div className="flex items-center gap-3">
+            <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#9c6b51] transition-colors duration-200">
+              Записаться
+            </button>
+            <button
+              onClick={() => setMobileMenuOpen(o => !o)}
+              className="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-[#e8ddd5] text-[#7a5f54]"
+            >
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={18} />
+            </button>
+          </div>
         </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-[#faf7f4] border-t border-[#e8ddd5] px-6 py-4 flex flex-col gap-1">
+            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["b2b", "Для бизнеса"], ["reviews", "Отзывы"], ["contacts", "Контакты"]].map(([id, label]) => (
+              <button
+                key={id}
+                onClick={() => { scrollTo(id); setMobileMenuOpen(false); }}
+                className="text-left py-3 text-[#7a5f54] text-sm border-b border-[#f0e6de] last:border-0 hover:text-[#b07d62] transition-colors"
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
       </nav>
 
       {/* HERO */}
