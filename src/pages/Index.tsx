@@ -531,7 +531,23 @@ export default function Index() {
               Работаю как внешний консультант по бизнес-процессам, управленческой структуре и корпоративной культуре. Помогаю компаниям выстраивать здоровую среду и повышать эффективность команд.
             </p>
           </div>
-          <div className="bg-[#f5ede6] rounded-2xl p-7 border border-[#e8ddd5] mb-8">
+          <div className="grid md:grid-cols-3 gap-5 mb-14">
+            {[
+              { icon: "GitBranch", title: "Бизнес-процессы", desc: "Анализ и оптимизация рабочих процессов, выявление узких мест и точек роста." },
+              { icon: "Network", title: "Управленческая структура", desc: "Аудит управления, работа с руководителями, развитие лидерских компетенций." },
+              { icon: "HeartHandshake", title: "Корпоративная культура", desc: "Формирование ценностей, снижение конфликтности, укрепление сплочённости команды." },
+            ].map((item, i) => (
+              <div key={i} className="bg-[#f5ede6] rounded-2xl p-6 border border-[#e8ddd5]">
+                <div className="w-10 h-10 rounded-full bg-[#f0e6de] flex items-center justify-center mb-4">
+                  <Icon name={item.icon} size={18} className="text-[#b07d62]" />
+                </div>
+                <h3 className="font-medium text-[#2c2420] mb-2">{item.title}</h3>
+                <p className="text-[#9c7b6e] text-sm leading-relaxed font-light">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-[#f5ede6] rounded-2xl p-7 border border-[#e8ddd5] mb-6">
             <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Стоимость</div>
             <p className="text-[#7a5f54] font-light leading-relaxed mb-5">
               Стоимость консультационных услуг для бизнеса варьируется индивидуально и обсуждается после первичного запроса. На итоговую цену влияет ряд факторов:
@@ -548,22 +564,6 @@ export default function Index() {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-5 mb-14">
-            {[
-              { icon: "GitBranch", title: "Бизнес-процессы", desc: "Анализ и оптимизация рабочих процессов, выявление узких мест и точек роста." },
-              { icon: "Network", title: "Управленческая структура", desc: "Аудит управления, работа с руководителями, развитие лидерских компетенций." },
-              { icon: "HeartHandshake", title: "Корпоративная культура", desc: "Формирование ценностей, снижение конфликтности, укрепление сплочённости команды." },
-            ].map((item, i) => (
-              <div key={i} className="bg-[#f5ede6] rounded-2xl p-6 border border-[#e8ddd5]">
-                <div className="w-10 h-10 rounded-full bg-[#f0e6de] flex items-center justify-center mb-4">
-                  <Icon name={item.icon} size={18} className="text-[#b07d62]" />
-                </div>
-                <h3 className="font-medium text-[#2c2420] mb-2">{item.title}</h3>
-                <p className="text-[#9c7b6e] text-sm leading-relaxed font-light">{item.desc}</p>
-              </div>
-            ))}
           </div>
 
           <div className="bg-[#f5ede6] rounded-2xl p-8 md:p-10 border border-[#e8ddd5]">
