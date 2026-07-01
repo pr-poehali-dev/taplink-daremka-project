@@ -246,6 +246,58 @@ export default function Index() {
         <div className="absolute bottom-8 left-10 w-20 h-20 rounded-full border border-[#d4b8ac]/20 pointer-events-none" />
       </section>
 
+      {/* ABOUT */}
+      <section className="py-24 bg-[#2c2420] text-[#faf7f4]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-[1fr_1.2fr_1fr] gap-10 items-center">
+            {/* Photo */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative w-72 lg:w-full max-w-xs">
+                <div className="absolute -bottom-4 -left-4 w-full h-full rounded-xl bg-[#b07d62]/20" />
+                <img
+                  src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/91b23862-17a6-4e51-bf34-8778cbfc4cff.jpg"
+                  alt="Дарья Емикеева"
+                  className="w-full object-cover object-top"
+                  style={{ borderRadius: "12px", boxShadow: "0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(0,0,0,0.4)", maskImage: "linear-gradient(to bottom, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)", maskComposite: "intersect", WebkitMaskComposite: "source-in" }}
+                />
+              </div>
+            </div>
+            {/* Text */}
+            <div>
+              <div className="text-[#b07d62] text-sm font-medium uppercase tracking-widest mb-4">Об авторе</div>
+              <h2 className="font-cormorant text-5xl lg:text-6xl font-light mb-6">Дарья Емикеева</h2>
+              <p className="text-[#c4a99a] leading-relaxed mb-8 font-light text-base">
+                Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям раскрыть потенциал и преодолеть внутренние барьеры — через индивидуальный подбор методов: МАК-терапию, коучинг, авторские методики и другие инструменты.
+              </p>
+              <div className="space-y-4">
+                {[
+                  ["GraduationCap", "Профессиональное психологическое образование"],
+                  ["Award", "Сертификация ICF — международный стандарт коучинга"],
+                  ["Layers", "Специализация: МАК-терапия и бизнес-тренинги"],
+                  ["Users", "Работаю индивидуально и в группах"],
+                ].map(([icon, text], i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <Icon name={icon as string} size={17} className="text-[#b07d62] flex-shrink-0" />
+                    <span className="text-[#c4a99a] text-base font-light">{text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Tags */}
+            <div>
+              <div className="text-[#c4a99a]/60 text-sm uppercase tracking-widest mb-6">С чем работаю</div>
+              <div className="flex flex-wrap gap-2">
+                {["Личностный рост", "Карьерные цели", "Самооценка", "Выгорание", "Прокрастинация", "Страх перемен", "Внутренние блоки", "Лидерство", "Отношения", "Поиск смысла", "Управление стрессом", "Развитие потенциала", "Профессиональный рост"].map((tag, i) => (
+                  <span key={i} className="border border-[#5a3f35] text-[#c4a99a] text-sm px-5 py-2 rounded-full font-light hover:border-[#b07d62] hover:text-[#b07d62] transition-colors duration-200 cursor-default">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* APPROACHES */}
       <section id="approaches" className="py-24 bg-[#f5ede6]">
         <div className="max-w-6xl mx-auto px-6">
@@ -425,58 +477,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="py-24 bg-[#2c2420] text-[#faf7f4]">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-[1fr_1.2fr_1fr] gap-10 items-center">
-            {/* Photo */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="relative w-72 lg:w-full max-w-xs">
-                <div className="absolute -bottom-4 -left-4 w-full h-full rounded-xl bg-[#b07d62]/20" />
-                <img
-                  src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/91b23862-17a6-4e51-bf34-8778cbfc4cff.jpg"
-                  alt="Дарья Емикеева"
-                  className="w-full object-cover object-top"
-                  style={{ borderRadius: "12px", boxShadow: "0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(0,0,0,0.4)", maskImage: "linear-gradient(to bottom, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)", maskComposite: "intersect", WebkitMaskComposite: "source-in" }}
-                />
-              </div>
-            </div>
-            {/* Text */}
-            <div>
-              <div className="text-[#b07d62] text-sm font-medium uppercase tracking-widest mb-4">Об авторе</div>
-              <h2 className="font-cormorant text-5xl lg:text-6xl font-light mb-6">Дарья Емикеева</h2>
-              <p className="text-[#c4a99a] leading-relaxed mb-8 font-light text-base">
-                Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям раскрыть потенциал и преодолеть внутренние барьеры — через индивидуальный подбор методов: МАК-терапию, коучинг, авторские методики и другие инструменты.
-              </p>
-              <div className="space-y-4">
-                {[
-                  ["GraduationCap", "Профессиональное психологическое образование"],
-                  ["Award", "Сертификация ICF — международный стандарт коучинга"],
-                  ["Layers", "Специализация: МАК-терапия и бизнес-тренинги"],
-                  ["Users", "Работаю индивидуально и в группах"],
-                ].map(([icon, text], i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <Icon name={icon as string} size={17} className="text-[#b07d62] flex-shrink-0" />
-                    <span className="text-[#c4a99a] text-base font-light">{text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Tags */}
-            <div>
-              <div className="text-[#c4a99a]/60 text-sm uppercase tracking-widest mb-6">С чем работаю</div>
-              <div className="flex flex-wrap gap-2">
-                {["Личностный рост", "Карьерные цели", "Самооценка", "Выгорание", "Прокрастинация", "Страх перемен", "Внутренние блоки", "Лидерство", "Отношения", "Поиск смысла", "Управление стрессом", "Развитие потенциала", "Профессиональный рост"].map((tag, i) => (
-                  <span key={i} className="border border-[#5a3f35] text-[#c4a99a] text-sm px-5 py-2 rounded-full font-light hover:border-[#b07d62] hover:text-[#b07d62] transition-colors duration-200 cursor-default">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* PRICING */}
       <section id="pricing" className="py-24 max-w-6xl mx-auto px-6">
         <div className="mb-16 text-center">
@@ -518,34 +518,6 @@ export default function Index() {
               </button>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-24 bg-[#f5ede6]">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="mb-12 text-center">
-            <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Вопросы и ответы</div>
-            <h2 className="font-cormorant text-4xl font-light text-[#2c2420]">Часто спрашивают</h2>
-          </div>
-          <div className="space-y-2">
-            {faqs.map(([q, a], i) => (
-              <div key={i} className="bg-[#faf7f4] rounded-xl overflow-hidden border border-[#e8ddd5]">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between px-8 py-6 text-left"
-                >
-                  <span className="font-medium text-[#2c2420] text-base pr-4">{q}</span>
-                  <Icon name={openFaq === i ? "ChevronUp" : "ChevronDown"} size={18} className="text-[#b07d62] flex-shrink-0" />
-                </button>
-                {openFaq === i && (
-                  <div className="px-8 pb-7">
-                    <p className="text-[#9c7b6e] text-base leading-relaxed font-light">{a}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -632,6 +604,34 @@ export default function Index() {
                 </div>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 bg-[#f5ede6]">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="mb-12 text-center">
+            <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Вопросы и ответы</div>
+            <h2 className="font-cormorant text-4xl font-light text-[#2c2420]">Часто спрашивают</h2>
+          </div>
+          <div className="space-y-2">
+            {faqs.map(([q, a], i) => (
+              <div key={i} className="bg-[#faf7f4] rounded-xl overflow-hidden border border-[#e8ddd5]">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full flex items-center justify-between px-8 py-6 text-left"
+                >
+                  <span className="font-medium text-[#2c2420] text-base pr-4">{q}</span>
+                  <Icon name={openFaq === i ? "ChevronUp" : "ChevronDown"} size={18} className="text-[#b07d62] flex-shrink-0" />
+                </button>
+                {openFaq === i && (
+                  <div className="px-8 pb-7">
+                    <p className="text-[#9c7b6e] text-base leading-relaxed font-light">{a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
