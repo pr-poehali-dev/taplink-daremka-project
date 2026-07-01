@@ -180,7 +180,7 @@ export default function Index() {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm text-[#7a5f54]">
-            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["reviews", "Отзывы"], ["contacts", "Контакты"]].map(([id, label]) => (
+            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["b2b", "Для бизнеса"], ["reviews", "Отзывы"], ["contacts", "Контакты"]].map(([id, label]) => (
               <button key={id} onClick={() => scrollTo(id)} className="hover:text-[#b07d62] transition-colors duration-200">
                 {label}
               </button>
