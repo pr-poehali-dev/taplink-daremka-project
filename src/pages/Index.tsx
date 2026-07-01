@@ -43,9 +43,9 @@ const plans = [
   },
   {
     name: "Психологическая сессия",
-    price: "4 000",
+    price: "4 500",
     period: "₽ / сессия",
-    desc: "Пакет 10 сессий — 35 000 ₽",
+    desc: "Пакет 10 сессий — 40 000 ₽",
     features: ["Психологическое консультирование", "Индивидуальный подбор методов", "Глубинная проработка", "Возможна работа с МАК-картами", "Конфиденциально"],
     highlight: false,
     cta: "Записаться",
@@ -181,7 +181,7 @@ export default function Index() {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm text-[#7a5f54]">
-            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["b2b", "Для бизнеса"], ["reviews", "Отзывы"], ["contacts", "Контакты"]].map(([id, label]) => (
+            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["b2b", "Для бизнеса"], ["reviews", "Отзывы"], ["faq", "FAQ"], ["contacts", "Контакты"]].map(([id, label]) => (
               <button key={id} onClick={() => scrollTo(id)} className="hover:text-[#b07d62] transition-colors duration-200">
                 {label}
               </button>
@@ -201,7 +201,7 @@ export default function Index() {
         </div>
         {mobileMenuOpen && (
           <div className="md:hidden bg-[#faf7f4] border-t border-[#e8ddd5] px-6 py-4 flex flex-col gap-1">
-            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["b2b", "Для бизнеса"], ["reviews", "Отзывы"], ["contacts", "Контакты"]].map(([id, label]) => (
+            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["b2b", "Для бизнеса"], ["reviews", "Отзывы"], ["faq", "FAQ"], ["contacts", "Контакты"]].map(([id, label]) => (
               <button
                 key={id}
                 onClick={() => { scrollTo(id); setMobileMenuOpen(false); }}
@@ -642,7 +642,7 @@ export default function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 bg-[#f5ede6]">
+      <section id="faq" className="py-24 bg-[#f5ede6]">
         <div className="max-w-3xl mx-auto px-6">
           <div className="mb-12 text-center">
             <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Вопросы и ответы</div>
@@ -860,7 +860,7 @@ export default function Index() {
             <span className="font-cormorant text-[#faf7f4] font-medium tracking-wide">Дарья Емикеева · психолог · сексолог · коуч</span>
           </div>
           <div className="text-[#c4a99a]/40 text-xs font-light">
-            © 2024 · Все встречи конфиденциальны ·{" "}
+            © 2023–2026 · Все встречи конфиденциальны ·{" "}
             <a href="/privacy" className="hover:text-[#b07d62] transition-colors duration-200 underline underline-offset-2">
               Политика конфиденциальности
             </a>
