@@ -531,6 +531,25 @@ export default function Index() {
               Работаю как внешний консультант по бизнес-процессам, управленческой структуре и корпоративной культуре. Помогаю компаниям выстраивать здоровую среду и повышать эффективность команд.
             </p>
           </div>
+          <div className="bg-[#f5ede6] rounded-2xl p-7 border border-[#e8ddd5] mb-8">
+            <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Стоимость</div>
+            <p className="text-[#7a5f54] font-light leading-relaxed mb-5">
+              Стоимость консультационных услуг для бизнеса варьируется индивидуально и обсуждается после первичного запроса. На итоговую цену влияет ряд факторов:
+            </p>
+            <div className="space-y-3">
+              {[
+                ["Award", "Опыт и квалификация специалиста"],
+                ["BarChart2", "Объём работ и масштаб компании"],
+                ["MapPin", "Регион и формат предоставления услуг"],
+              ].map(([icon, text], i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <Icon name={icon as string} size={16} className="text-[#b07d62] flex-shrink-0" />
+                  <span className="text-[#7a5f54] text-sm font-light">{text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-5 mb-14">
             {[
               { icon: "GitBranch", title: "Бизнес-процессы", desc: "Анализ и оптимизация рабочих процессов, выявление узких мест и точек роста." },
