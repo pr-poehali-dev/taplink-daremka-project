@@ -504,7 +504,11 @@ export default function Index() {
         <div className="mb-16 text-center">
           <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Стоимость</div>
           <h2 className="font-cormorant text-4xl lg:text-5xl font-light text-[#2c2420]">Прозрачные условия</h2>
-          <p className="text-[#9c7b6e] mt-4 font-light max-w-lg mx-auto">Первая встреча — по обычной цене. Никаких скрытых платежей и обязательных пакетов.</p>
+          <p className="text-[#9c7b6e] mt-4 font-light max-w-lg mx-auto">Никаких скрытых платежей и обязательных пакетов.</p>
+          <div className="mt-5 inline-flex items-center gap-2 bg-[#b07d62]/10 text-[#9c6b51] text-sm font-medium px-4 py-2 rounded-full">
+            <Icon name="Sparkles" size={16} />
+            Первая индивидуальная сессия — всегда со скидкой 20%
+          </div>
         </div>
         <div className="grid lg:grid-cols-3 gap-6">
           {plans.map((p, i) => (
