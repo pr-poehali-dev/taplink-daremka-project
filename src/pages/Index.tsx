@@ -719,7 +719,7 @@ export default function Index() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mb-3">
               <a
-                href="https://t.me/+79185379305"
+                href="https://t.me/kadari_psy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 bg-[#2AABEE] text-white font-medium py-3.5 rounded-full hover:opacity-90 transition-opacity duration-200 text-sm"
