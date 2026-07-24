@@ -714,8 +714,31 @@ export default function Index() {
           <div>
             <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Запись</div>
             <h2 className="font-cormorant text-5xl lg:text-6xl font-light text-[#2c2420] mb-6">Начнём разговор?</h2>
-            <p className="text-[#9c7b6e] leading-relaxed mb-10 font-light text-base">
+            <p className="text-[#9c7b6e] leading-relaxed mb-6 font-light text-base">
               Напишите мне — расскажите о своём запросе, и я предложу подходящий формат работы. Отвечаю в течение нескольких часов.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 mb-3">
+              <a
+                href="https://t.me/+79185379305"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 bg-[#2AABEE] text-white font-medium py-3.5 rounded-full hover:opacity-90 transition-opacity duration-200 text-sm"
+              >
+                <Icon name="Send" size={17} />
+                Написать в Telegram
+              </a>
+              <a
+                href="https://wa.me/79185379305"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-medium py-3.5 rounded-full hover:opacity-90 transition-opacity duration-200 text-sm"
+              >
+                <Icon name="MessageCircle" size={17} />
+                Написать в WhatsApp
+              </a>
+            </div>
+            <p className="text-[#b07d62] text-sm font-medium mb-10">
+              Получить скидку 20% на первую сессию
             </p>
             <div className="space-y-5 mb-10">
               {[
