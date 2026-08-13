@@ -67,7 +67,7 @@ export default function TopSection() {
               <em className="font-semibold not-italic text-7xl lg:text-8xl text-[#b07d62] uppercase tracking-wide">собой</em></span>
             </h1>
             <p className="text-[#7a5f54] text-lg leading-relaxed mb-6 max-w-md font-light">
-              Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям расти и меняться, используя широкий арсенал методов — от МАК-терапии до авторских методик.
+              Психолог-консультант, сексолог, коуч ICF, специалист по системному бизнес-консультированию. Помогаю людям расти и меняться, используя широкий арсенал методов — от МАК-терапии до авторских методик.
             </p>
             <p className="text-[#2c2420] text-lg font-medium mb-4 max-w-md">
               Помогаю выйти из тупика в личной жизни и карьере
@@ -146,7 +146,7 @@ export default function TopSection() {
               <div className="text-[#b07d62] text-sm font-medium uppercase tracking-widest mb-4">Об авторе</div>
               <h2 className="font-cormorant text-5xl lg:text-6xl font-light mb-6">Дарья Емикеева</h2>
               <p className="text-[#c4a99a] leading-relaxed mb-4 font-light text-base">
-                Психолог-консультант, сексолог, коуч ICF и бизнес-тренер.
+                Психолог-консультант, сексолог, коуч ICF, специалист по системному бизнес-консультированию.
               </p>
               <p className="text-[#c4a99a] leading-relaxed mb-8 font-light text-base italic">
                 Я помогаю взрослым и парам, которые зашли в тупик в отношениях, состоянии или карьере, вернуть близость, внутреннюю опору и рост дохода — через индивидуальное сочетание консультирования, МАК-карт, коучинга ICF и авторских методик. <span className="text-[#b07d62] not-italic font-medium">Бережно. Глубоко. До результата.</span>
@@ -155,7 +155,7 @@ export default function TopSection() {
                 {[
                   ["GraduationCap", "Профессиональное психологическое образование"],
                   ["Award", "Сертификация ICF — международный стандарт коучинга"],
-                  ["Layers", "Специализация: МАК-терапия и бизнес-тренинги"],
+                  ["Layers", "Специализация: МАК-терапия и системное бизнес-консультирование"],
                   ["Users", "Работаю индивидуально и в группах"],
                 ].map(([icon, text], i) => (
                   <div key={i} className="flex items-center gap-3">
