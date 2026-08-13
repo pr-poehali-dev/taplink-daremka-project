@@ -146,7 +146,7 @@ export default function TopSection() {
               <div className="text-[#b07d62] text-sm font-medium uppercase tracking-widest mb-4">Об авторе</div>
               <h2 className="font-cormorant text-5xl lg:text-6xl font-light mb-6">Дарья Емикеева</h2>
               <p className="text-[#c4a99a] leading-relaxed mb-4 font-light text-base">
-                Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям раскрыть потенциал и преодолеть внутренние барьеры — через индивидуальный подбор методов: МАК-терапию, коучинг, авторские методики и другие инструменты.
+                Психолог-консультант, сексолог, коуч ICF и бизнес-тренер.
               </p>
               <p className="text-[#c4a99a] leading-relaxed mb-8 font-light text-base italic">
                 Я помогаю взрослым и парам, которые зашли в тупик в отношениях, состоянии или карьере, вернуть близость, внутреннюю опору и рост дохода — через индивидуальное сочетание консультирования, МАК-карт, коучинга ICF и авторских методик. <span className="text-[#b07d62] not-italic font-medium">Бережно. Глубоко. До результата.</span>
