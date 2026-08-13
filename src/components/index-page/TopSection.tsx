@@ -105,7 +105,7 @@ export default function TopSection() {
             </div>
           </div>
           {/* Photo */}
-          <div className="flex justify-center lg:justify-end items-end h-full order-first lg:order-last">
+          <div className="flex justify-center lg:justify-end items-center h-full order-first lg:order-last">
             <div className="relative">
               <div className="absolute -bottom-4 -left-4 w-full h-full rounded-[2.5rem] bg-[#f0e6de]" />
               <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#b07d62]/10" />
