@@ -226,8 +226,26 @@ export default function Index() {
               <span className="bg-[#c49880]/15 text-[#2c2420] px-5 py-3 rounded-3xl inline-block" style={{backdropFilter: "blur(2px)", boxShadow: "0 0 32px 12px rgba(196,152,128,0.13)"}}>Расти. Меняться.<br />Становиться<br />
               <em className="font-semibold not-italic text-7xl lg:text-8xl text-[#b07d62] uppercase tracking-wide">собой</em></span>
             </h1>
-            <p className="text-[#7a5f54] text-lg leading-relaxed mb-10 max-w-md font-light">
+            <p className="text-[#7a5f54] text-lg leading-relaxed mb-6 max-w-md font-light">
               Психолог-консультант, сексолог, коуч ICF и бизнес-тренер. Помогаю людям расти и меняться, используя широкий арсенал методов — от МАК-терапии до авторских методик.
+            </p>
+            <p className="text-[#2c2420] text-lg font-medium mb-4 max-w-md">
+              Помогаю выйти из тупика в личной жизни и карьере.
+            </p>
+            <ul className="space-y-2 mb-6 max-w-md">
+              {[
+                "Наладить отношения и вернуть близость",
+                "Избавиться от выгорания и страхов",
+                "Найти свое дело и пробить финансовый потолок",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-[#7a5f54] font-light">
+                  <Icon name="Check" size={18} className="text-[#b07d62] mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-[#b07d62] font-cormorant text-2xl font-semibold mb-10">
+              Бережно. Глубоко. До результата.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-8 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200">
