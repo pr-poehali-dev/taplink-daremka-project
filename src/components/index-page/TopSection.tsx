@@ -178,6 +178,9 @@ export default function TopSection() {
               <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-8 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200">
                 Познакомиться — диагностическая встреча
               </button>
+              <p className="text-[#9c7b6e] text-sm font-light mt-3 max-w-sm">
+                Бесплатная 20-минутная сессия-знакомство. Мы созвонимся, обсудим ваш запрос и поймём, сможем ли мы быть полезны друг другу. Без продаж и давления.
+              </p>
             </div>
             {/* Tags */}
             <div>
