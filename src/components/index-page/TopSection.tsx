@@ -145,34 +145,53 @@ export default function TopSection() {
             <div>
               <div className="text-[#b07d62] text-sm font-medium uppercase tracking-widest mb-4">Об авторе</div>
               <h2 className="font-cormorant text-5xl lg:text-6xl font-light mb-6">Дарья Емикеева</h2>
+              <p className="text-[#faf7f4] leading-relaxed mb-4 font-light text-lg">
+                Помогаю взрослым и парам выйти из тупика в отношениях, состоянии и карьере. Компаниям — выстроить процессы, команду и управление.
+              </p>
               <p className="text-[#c4a99a] leading-relaxed mb-4 font-light text-base">
-                Психолог-консультант, сексолог, коуч ICF, специалист по системному бизнес-консультированию.
+                Психолог-консультант, коуч ICF, сексолог, бизнес-консультант.
               </p>
-              <p className="text-[#c4a99a] leading-relaxed mb-8 font-light text-base italic">
-                Я помогаю взрослым и парам, которые зашли в тупик в отношениях, состоянии или карьере, вернуть близость, внутреннюю опору и рост дохода — через индивидуальное сочетание консультирования, МАК-карт, коучинга ICF и авторских методик. <span className="text-[#b07d62] not-italic font-medium">Бережно. Глубоко. До результата.</span>
+              <p className="text-[#b07d62] font-cormorant text-2xl font-semibold mb-8">
+                Бережно. Глубоко. До результата.
               </p>
-              <div className="space-y-4">
+              <div className="flex items-center gap-8 mb-8">
+                {[["7 лет", "практики"], ["1000+", "часов консультаций"]].map(([val, label], i) => (
+                  <div key={i}>
+                    <div className="font-cormorant text-3xl font-semibold text-[#b07d62]">{val}</div>
+                    <div className="text-xs text-[#9c7b6e] mt-0.5">{label}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-4 mb-10">
                 {[
-                  ["GraduationCap", "Профессиональное психологическое образование"],
+                  ["GraduationCap", "Психологическое образование: МГППУ, МИП"],
                   ["Award", "Сертификация ICF — международный стандарт коучинга"],
-                  ["Layers", "Специализация: МАК-терапия и системное бизнес-консультирование"],
-                  ["Users", "Работаю индивидуально и в группах"],
+                  ["Briefcase", "50+ тренингов и программ для компаний"],
+                  ["Layers", "Специализация: МАК-терапия (мягкая работа с подсознанием через метафорические карты) и системное бизнес-консультирование"],
                 ].map(([icon, text], i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <Icon name={icon as string} size={17} className="text-[#b07d62] flex-shrink-0" />
+                  <div key={i} className="flex items-start gap-3">
+                    <Icon name={icon as string} size={17} className="text-[#b07d62] flex-shrink-0 mt-0.5" />
                     <span className="text-[#c4a99a] text-base font-light">{text}</span>
                   </div>
                 ))}
               </div>
+              <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-8 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200">
+                Познакомиться — диагностическая встреча
+              </button>
             </div>
             {/* Tags */}
             <div>
               <div className="text-[#c4a99a]/60 text-sm uppercase tracking-widest mb-6">С чем работаю</div>
-              <div className="flex flex-wrap gap-2">
-                {["Личностный рост", "Карьерные цели", "Самооценка", "Выгорание", "Прокрастинация", "Страх перемен", "Внутренние блоки", "Лидерство", "Отношения", "Поиск смысла", "Управление стрессом", "Развитие потенциала", "Профессиональный рост"].map((tag, i) => (
-                  <span key={i} className="border border-[#5a3f35] text-[#c4a99a] text-sm px-5 py-2 rounded-full font-light hover:border-[#b07d62] hover:text-[#b07d62] transition-colors duration-200 cursor-default">
-                    {tag}
-                  </span>
+              <div className="space-y-5">
+                {[
+                  ["Личное", "самооценка • выгорание • страхи и блоки • стресс • смыслы"],
+                  ["Пары", "отношения • близость • интимность"],
+                  ["Карьера и бизнес", "цели • лидерство • рост"],
+                ].map(([title, tags], i) => (
+                  <div key={i}>
+                    <div className="text-[#b07d62] text-sm font-medium mb-2">{title}</div>
+                    <div className="text-[#c4a99a] text-base font-light leading-relaxed">{tags}</div>
+                  </div>
                 ))}
               </div>
             </div>
