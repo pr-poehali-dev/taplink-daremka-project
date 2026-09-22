@@ -28,21 +28,12 @@ const plans = [
     cta: "Записаться в группу",
   },
   {
-    name: "Индивидуальный коучинг",
+    name: "Индивидуальная сессия",
     price: "6 500",
     period: "₽ / сессия",
     desc: "Пакет 10 сессий — 60 000 ₽",
-    features: ["Коучинг ICF + авторские методики", "Личностный и карьерный рост", "Чёткие цели и стратегия", "Приоритетная запись"],
+    features: ["Психология, коучинг ICF и бизнес-консультирование в одном формате", "Индивидуальный подбор методов под ваш запрос", "МАК-карты и авторские методики", "Конфиденциально"],
     highlight: true,
-    cta: "Начать коучинг",
-  },
-  {
-    name: "Психологическая сессия",
-    price: "5 000",
-    period: "₽ / сессия",
-    desc: "Пакет 10 сессий — 45 000 ₽",
-    features: ["Психологическое консультирование", "Индивидуальный подбор методов", "Глубинная проработка", "Возможна работа с МАК-картами", "Конфиденциально"],
-    highlight: false,
     cta: "Записаться",
   },
 ];
@@ -244,7 +235,7 @@ export default function ApproachesMethodSection({ onScrollToContacts }: Approach
             Первая индивидуальная сессия — всегда со скидкой 20%
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {plans.map((p, i) => (
             <div key={i} className={`relative rounded-2xl p-8 flex flex-col ${p.highlight ? "bg-[#b07d62]" : "bg-[#f5ede6] border border-[#e8ddd5]"}`}>
               {p.highlight && (

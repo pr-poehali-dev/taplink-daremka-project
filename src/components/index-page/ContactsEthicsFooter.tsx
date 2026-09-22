@@ -264,7 +264,7 @@ const ContactsEthicsFooter = forwardRef<ContactsEthicsFooterHandle>((_, ref) => 
             <div className="w-7 h-7 rounded-full bg-[#b07d62] flex items-center justify-center">
               <Icon name="Sprout" size={13} className="text-[#faf7f4]" />
             </div>
-            <span className="font-cormorant text-[#faf7f4] font-medium tracking-wide">Дарья Емикеева · психолог · сексолог · коуч</span>
+            <span className="font-cormorant text-[#faf7f4] font-medium tracking-wide">Альвинцева Дарья · провокативный психолог · сексолог · стратегический бизнес-коуч</span>
           </div>
           <div className="text-[#c4a99a]/40 text-xs font-light">
             © 2023–2026 · Все встречи конфиденциальны ·{" "}

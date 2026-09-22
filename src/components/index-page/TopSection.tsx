@@ -15,8 +15,8 @@ export default function TopSection() {
               <Icon name="Sprout" size={15} className="text-[#faf7f4]" />
             </div>
             <div>
-              <span className="font-cormorant text-lg font-semibold text-[#2c2420] tracking-wide">Дарья Емикеева</span>
-              <span className="hidden sm:inline text-xs text-[#9c7b6e] ml-2">психолог · сексолог · коуч</span>
+              <span className="font-cormorant text-lg font-semibold text-[#2c2420] tracking-wide">Альвинцева Дарья</span>
+              <span className="hidden sm:inline text-xs text-[#9c7b6e] ml-2">провокативный психолог · сексолог · стратегический бизнес-коуч</span>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm text-[#7a5f54]">
@@ -67,7 +67,7 @@ export default function TopSection() {
               <em className="font-semibold not-italic text-7xl lg:text-8xl text-[#b07d62] uppercase tracking-wide">собой</em></span>
             </h1>
             <p className="text-[#7a5f54] text-lg leading-relaxed mb-6 max-w-md font-light">
-              Психолог-консультант, сексолог, коуч ICF, специалист по системному бизнес-консультированию. Помогаю людям расти и меняться, используя широкий арсенал методов — от МАК-терапии до авторских методик.
+              Провокативный психолог, сексолог, стратегический бизнес-коуч. Помогаю людям расти и меняться, используя широкий арсенал методов — от МАК-терапии до авторских методик.
             </p>
             <p className="text-[#2c2420] text-lg font-medium mb-4 max-w-md">
               Помогаю выйти из тупика в личной жизни и карьере
@@ -111,12 +111,12 @@ export default function TopSection() {
               <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#b07d62]/10" />
               <img
                 src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/1b0c4769-73cb-4344-8c7b-732d028fb491.jpg"
-                alt="Дарья Емикеева"
+                alt="Альвинцева Дарья"
                 className="relative rounded-[2.5rem] w-[320px] h-[420px] lg:w-[520px] lg:h-[680px] object-cover object-top shadow-xl"
               />
               <div className="absolute bottom-8 -left-8 bg-[#faf7f4] rounded-2xl px-6 py-4 shadow-lg border border-[#e8ddd5]">
-                <div className="font-cormorant text-2xl font-semibold text-[#2c2420]">Дарья Емикеева</div>
-                <div className="text-sm text-[#9c7b6e] mt-1">психолог · сексолог · коуч ICF</div>
+                <div className="font-cormorant text-2xl font-semibold text-[#2c2420]">Альвинцева Дарья</div>
+                <div className="text-sm text-[#9c7b6e] mt-1">провокативный психолог · сексолог · бизнес-коуч</div>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function TopSection() {
                 <div className="absolute -bottom-4 -left-4 w-full h-full rounded-xl bg-[#b07d62]/20" />
                 <img
                   src="https://cdn.poehali.dev/projects/01f169e7-c520-4152-96e2-336496512915/bucket/91b23862-17a6-4e51-bf34-8778cbfc4cff.jpg"
-                  alt="Дарья Емикеева"
+                  alt="Альвинцева Дарья"
                   className="w-full object-cover object-top"
                   style={{ borderRadius: "12px", boxShadow: "0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(0,0,0,0.4)", maskImage: "linear-gradient(to bottom, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)", maskComposite: "intersect", WebkitMaskComposite: "source-in" }}
                 />
@@ -144,12 +144,12 @@ export default function TopSection() {
             {/* Text */}
             <div>
               <div className="text-[#b07d62] text-sm font-medium uppercase tracking-widest mb-4">Об авторе</div>
-              <h2 className="font-cormorant text-5xl lg:text-6xl font-light mb-6">Дарья Емикеева</h2>
+              <h2 className="font-cormorant text-5xl lg:text-6xl font-light mb-6">Альвинцева Дарья</h2>
               <p className="text-[#faf7f4] leading-relaxed mb-4 font-light text-lg">
                 Помогаю взрослым и парам выйти из тупика в отношениях, состоянии и карьере. Компаниям — выстроить процессы, команду и управление.
               </p>
               <p className="text-[#c4a99a] leading-relaxed mb-4 font-light text-base">
-                Психолог-консультант, коуч ICF, сексолог, бизнес-консультант.
+                Провокативный психолог, сексолог, стратегический бизнес-коуч.
               </p>
               <p className="text-[#b07d62] font-cormorant text-2xl font-semibold mb-8">
                 Бережно. Глубоко. До результата.
