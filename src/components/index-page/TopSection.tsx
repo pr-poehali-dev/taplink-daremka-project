@@ -18,37 +18,38 @@ export default function TopSection() {
     <>
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#faf7f4]/95 backdrop-blur-sm border-b border-[#e8ddd5]">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#b07d62] flex items-center justify-center">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3 shrink-0">
+            <div className="w-8 h-8 rounded-full bg-[#b07d62] flex items-center justify-center shrink-0">
               <Icon name="Sprout" size={15} className="text-[#faf7f4]" />
             </div>
-            <div>
-              <span className="font-cormorant text-lg font-semibold text-[#2c2420] tracking-wide">Альвинцева Дарья</span>
-              <span className="hidden sm:inline text-xs text-[#9c7b6e] ml-2">провокативный психолог · сексолог · стратегический бизнес-коуч</span>
+            <div className="hidden sm:block leading-tight">
+              <div className="font-cormorant text-lg font-semibold text-[#2c2420] tracking-wide">Альвинцева Дарья</div>
+              <div className="hidden xl:block text-xs text-[#9c7b6e]">провокативный психолог · сексолог · бизнес-коуч</div>
             </div>
+            <span className="sm:hidden font-cormorant text-lg font-semibold text-[#2c2420] tracking-wide">Альвинцева Дарья</span>
           </div>
-          <div className="hidden md:flex items-center gap-7 text-sm text-[#7a5f54]">
+          <div className="hidden lg:flex items-center gap-6 text-sm text-[#7a5f54] whitespace-nowrap">
             {navLinks.map(([id, label]) => (
               <button key={id} onClick={() => scrollTo(id)} className="hover:text-[#b07d62] transition-colors duration-200">
                 {label}
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-3">
-            <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#9c6b51] transition-colors duration-200">
+          <div className="flex items-center gap-3 shrink-0">
+            <button onClick={() => scrollTo("contacts")} className="hidden sm:block bg-[#b07d62] text-[#faf7f4] text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#9c6b51] transition-colors duration-200 whitespace-nowrap">
               Записаться
             </button>
             <button
               onClick={() => setMobileMenuOpen(o => !o)}
-              className="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-[#e8ddd5] text-[#7a5f54]"
+              className="lg:hidden w-9 h-9 flex items-center justify-center rounded-full border border-[#e8ddd5] text-[#7a5f54] shrink-0"
             >
               <Icon name={mobileMenuOpen ? "X" : "Menu"} size={18} />
             </button>
           </div>
         </div>
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#faf7f4] border-t border-[#e8ddd5] px-6 py-4 flex flex-col gap-1">
+          <div className="lg:hidden bg-[#faf7f4] border-t border-[#e8ddd5] px-6 py-4 flex flex-col gap-1">
             {navLinks.map(([id, label]) => (
               <button
                 key={id}
@@ -58,6 +59,12 @@ export default function TopSection() {
                 {label}
               </button>
             ))}
+            <button
+              onClick={() => { scrollTo("contacts"); setMobileMenuOpen(false); }}
+              className="sm:hidden mt-3 bg-[#b07d62] text-[#faf7f4] text-sm font-medium px-5 py-3 rounded-full hover:bg-[#9c6b51] transition-colors duration-200"
+            >
+              Записаться
+            </button>
           </div>
         )}
       </nav>
