@@ -2,6 +2,15 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { scrollTo } from "./constants";
 
+const navLinks: [string, string][] = [
+  ["about", "Обо мне"],
+  ["results", "Что по итогу"],
+  ["pricing", "Стоимость"],
+  ["faq", "Вопросы"],
+  ["reviews", "Отзывы"],
+  ["contacts", "Запись"],
+];
+
 export default function TopSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -20,7 +29,7 @@ export default function TopSection() {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm text-[#7a5f54]">
-            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["b2b", "Для бизнеса"], ["reviews", "Отзывы"], ["faq", "FAQ"], ["contacts", "Контакты"]].map(([id, label]) => (
+            {navLinks.map(([id, label]) => (
               <button key={id} onClick={() => scrollTo(id)} className="hover:text-[#b07d62] transition-colors duration-200">
                 {label}
               </button>
@@ -40,7 +49,7 @@ export default function TopSection() {
         </div>
         {mobileMenuOpen && (
           <div className="md:hidden bg-[#faf7f4] border-t border-[#e8ddd5] px-6 py-4 flex flex-col gap-1">
-            {[["approaches", "Подходы"], ["method", "Методика"], ["pricing", "Стоимость"], ["b2b", "Для бизнеса"], ["reviews", "Отзывы"], ["faq", "FAQ"], ["contacts", "Контакты"]].map(([id, label]) => (
+            {navLinks.map(([id, label]) => (
               <button
                 key={id}
                 onClick={() => { scrollTo(id); setMobileMenuOpen(false); }}
@@ -91,7 +100,7 @@ export default function TopSection() {
               <button onClick={() => scrollTo("contacts")} className="bg-[#b07d62] text-[#faf7f4] font-medium px-8 py-4 rounded-full hover:bg-[#9c6b51] transition-all duration-200">
                 Записаться на первую сессию
               </button>
-              <button onClick={() => scrollTo("approaches")} className="border border-[#d4b8ac] text-[#7a5f54] px-8 py-4 rounded-full hover:border-[#b07d62] hover:text-[#b07d62] transition-all duration-200">
+              <button onClick={() => scrollTo("about")} className="border border-[#d4b8ac] text-[#7a5f54] px-8 py-4 rounded-full hover:border-[#b07d62] hover:text-[#b07d62] transition-all duration-200">
                 Узнать подробнее
               </button>
             </div>
@@ -126,7 +135,7 @@ export default function TopSection() {
       </section>
 
       {/* ABOUT */}
-      <section className="py-24 bg-[#2c2420] text-[#faf7f4]">
+      <section id="about" className="py-24 bg-[#2c2420] text-[#faf7f4]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-[1fr_1.2fr_1fr] gap-10 items-center">
             {/* Photo */}
