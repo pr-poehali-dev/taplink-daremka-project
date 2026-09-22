@@ -1,5 +1,4 @@
 import Icon from "@/components/ui/icon";
-import { scrollTo } from "./constants";
 
 const approaches = [
   { icon: "Brain", title: "МАК-терапия", desc: "Один из инструментов в работе: метафорические ассоциативные карты помогают образно исследовать внутренний мир, страхи и скрытые ресурсы." },
@@ -19,22 +18,34 @@ const steps = [
 
 const plans = [
   {
-    name: "Групповая сессия",
-    price: "2 500",
-    period: "₽ / чел.",
-    desc: "Пакет 5 сессий — 8 500 ₽",
-    features: ["Работа в группе", "МАК и коучинговые техники", "Поддержка участников", "Онлайн или очно"],
-    highlight: false,
-    cta: "Записаться в группу",
-  },
-  {
     name: "Индивидуальная сессия",
-    price: "6 500",
+    price: "7 500",
     period: "₽ / сессия",
-    desc: "Пакет 10 сессий — 60 000 ₽",
+    desc: "Личная встреча",
     features: ["Психология, коучинг ICF и бизнес-консультирование в одном формате", "Индивидуальный подбор методов под ваш запрос", "МАК-карты и авторские методики", "Конфиденциально"],
     highlight: true,
     cta: "Записаться",
+    preset: "Хочу записаться на индивидуальную сессию",
+  },
+  {
+    name: "Работа с компаниями",
+    price: "По запросу",
+    period: "",
+    desc: "Для бизнеса",
+    features: ["Диагностика бизнес-структуры и команды", "Системное консультирование и коучинг руководителей", "Формат и объём — под задачу компании", "Индивидуальный расчёт стоимости"],
+    highlight: false,
+    cta: "Обсудить задачу",
+    preset: "Интересует работа с компанией",
+  },
+  {
+    name: "Клуб «Калибр»",
+    price: "от 7 000",
+    period: "₽ / мес",
+    desc: "3-месячный трансформационный клуб",
+    features: ["Для руководителей и предпринимателей", "12 недель: еженедельные созвоны + практика", "6 рабочих артефактов на выходе", "3 тарифа — от наблюдателя до VIP"],
+    highlight: false,
+    cta: "Узнать о клубе",
+    preset: "Интересует клуб «Калибр»",
   },
 ];
 
@@ -230,12 +241,8 @@ export default function ApproachesMethodSection({ onScrollToContacts }: Approach
           <div className="text-[#b07d62] text-xs font-medium uppercase tracking-widest mb-4">Стоимость</div>
           <h2 className="font-cormorant text-4xl lg:text-5xl font-light text-[#2c2420]">Прозрачные условия</h2>
           <p className="text-[#9c7b6e] mt-4 font-light max-w-lg mx-auto">Никаких скрытых платежей и обязательных пакетов.</p>
-          <div className="mt-5 inline-flex items-center gap-2 bg-[#b07d62]/10 text-[#9c6b51] text-sm font-medium px-4 py-2 rounded-full">
-            <Icon name="Sparkles" size={16} />
-            Первая индивидуальная сессия — всегда со скидкой 20%
-          </div>
         </div>
-        <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((p, i) => (
             <div key={i} className={`relative rounded-2xl p-8 flex flex-col ${p.highlight ? "bg-[#b07d62]" : "bg-[#f5ede6] border border-[#e8ddd5]"}`}>
               {p.highlight && (
@@ -262,7 +269,7 @@ export default function ApproachesMethodSection({ onScrollToContacts }: Approach
                 ))}
               </ul>
               <button
-                onClick={() => scrollTo("contacts")}
+                onClick={() => onScrollToContacts(p.preset)}
                 className={`w-full py-3 rounded-full font-medium text-sm transition-all duration-200 ${p.highlight ? "bg-[#faf7f4] text-[#b07d62] hover:bg-[#f0e6de]" : "border border-[#d4b8ac] text-[#7a5f54] hover:border-[#b07d62] hover:text-[#b07d62]"}`}
               >
                 {p.cta}
