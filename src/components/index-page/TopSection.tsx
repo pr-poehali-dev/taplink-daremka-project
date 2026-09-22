@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { scrollTo } from "./constants";
 
@@ -7,7 +8,6 @@ const navLinks: [string, string][] = [
   ["results", "Что по итогу"],
   ["pricing", "Стоимость"],
   ["faq", "Вопросы"],
-  ["reviews", "Отзывы"],
   ["contacts", "Запись"],
 ];
 
@@ -35,6 +35,9 @@ export default function TopSection() {
                 {label}
               </button>
             ))}
+            <Link to="/reviews" className="hover:text-[#b07d62] transition-colors duration-200">
+              Отзывы
+            </Link>
           </div>
           <div className="flex items-center gap-3 shrink-0">
             <button onClick={() => scrollTo("contacts")} className="hidden sm:block bg-[#b07d62] text-[#faf7f4] text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#9c6b51] transition-colors duration-200 whitespace-nowrap">
@@ -59,6 +62,13 @@ export default function TopSection() {
                 {label}
               </button>
             ))}
+            <Link
+              to="/reviews"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-left py-3 text-[#7a5f54] text-sm border-b border-[#f0e6de] hover:text-[#b07d62] transition-colors"
+            >
+              Отзывы
+            </Link>
             <button
               onClick={() => { scrollTo("contacts"); setMobileMenuOpen(false); }}
               className="sm:hidden mt-3 bg-[#b07d62] text-[#faf7f4] text-sm font-medium px-5 py-3 rounded-full hover:bg-[#9c6b51] transition-colors duration-200"
