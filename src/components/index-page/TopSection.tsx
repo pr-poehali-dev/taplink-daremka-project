@@ -181,7 +181,7 @@ export default function TopSection() {
                 Бережно. Глубоко. До результата.
               </p>
               <div className="flex items-center gap-8 mb-8">
-                {[["7 лет", "практики"], ["1000+", "часов консультаций"]].map(([val, label], i) => (
+                {[["5 лет", "практики"], ["1000+", "часов консультаций"]].map(([val, label], i) => (
                   <div key={i}>
                     <div className="font-cormorant text-3xl font-semibold text-[#b07d62]">{val}</div>
                     <div className="text-xs text-[#9c7b6e] mt-0.5">{label}</div>
