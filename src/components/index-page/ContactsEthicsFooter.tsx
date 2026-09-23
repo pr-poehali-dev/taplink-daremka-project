@@ -155,12 +155,41 @@ const ContactsEthicsFooter = forwardRef<ContactsEthicsFooterHandle>((_, ref) => 
 
       {/* FOOTER */}
       <footer className="bg-[#2c2420] py-8">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 rounded-full bg-[#b07d62] flex items-center justify-center">
               <Icon name="Sprout" size={13} className="text-[#faf7f4]" />
             </div>
             <span className="font-cormorant text-[#faf7f4] font-medium tracking-wide">Альвинцева Дарья · провокативный психолог · сексолог · стратегический бизнес-коуч</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.instagram.com/daremka_psy?stkn=MXA2cWJ5Njg5ZHRkcA%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="w-8 h-8 rounded-full border border-[#c4a99a]/30 flex items-center justify-center text-[#c4a99a] hover:text-[#faf7f4] hover:border-[#b07d62] transition-colors duration-200"
+            >
+              <Icon name="Instagram" size={15} />
+            </a>
+            <a
+              href="https://vk.ru/club236954352"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="VK"
+              className="w-8 h-8 rounded-full border border-[#c4a99a]/30 flex items-center justify-center text-[#c4a99a] hover:text-[#faf7f4] hover:border-[#b07d62] transition-colors duration-200 text-xs font-semibold"
+            >
+              VK
+            </a>
+            <a
+              href="https://t.me/KADARI_psy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Telegram"
+              className="w-8 h-8 rounded-full border border-[#c4a99a]/30 flex items-center justify-center text-[#c4a99a] hover:text-[#faf7f4] hover:border-[#b07d62] transition-colors duration-200"
+            >
+              <Icon name="Send" size={14} />
+            </a>
           </div>
           <div className="text-[#c4a99a]/40 text-xs font-light">
             © 2023–2026 · Все встречи конфиденциальны ·{" "}
