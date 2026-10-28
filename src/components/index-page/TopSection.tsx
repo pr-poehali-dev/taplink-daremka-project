@@ -142,7 +142,7 @@ export default function TopSection() {
               />
               <div className="absolute bottom-8 -left-8 bg-[#faf7f4] rounded-2xl px-6 py-4 shadow-lg border border-[#e8ddd5]">
                 <div className="font-cormorant text-2xl font-semibold text-[#2c2420]">Альвинцева Дарья</div>
-                <div className="text-sm text-[#9c7b6e] mt-1">провокативный психолог · сексолог · бизнес-коуч</div>
+                <div className="text-sm text-[#9c7b6e] mt-1">Провокативный психолог, сексолог, стратегический бизнес-коуч</div>
               </div>
             </div>
           </div>
