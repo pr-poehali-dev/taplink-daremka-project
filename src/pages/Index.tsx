@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import TopSection from "@/components/index-page/TopSection";
+import ValueSection from "@/components/index-page/ValueSection";
 import ApproachesMethodSection from "@/components/index-page/ApproachesMethodSection";
 import B2bFaqReviewsSection from "@/components/index-page/B2bFaqReviewsSection";
 import ContactsEthicsFooter, { ContactsEthicsFooterHandle } from "@/components/index-page/ContactsEthicsFooter";
@@ -15,6 +16,7 @@ export default function Index() {
   return (
     <div className="font-rubik bg-[#faf7f4] text-[#2c2420] min-h-screen overflow-x-hidden">
       <TopSection />
+      <ValueSection onScrollToContacts={scrollToContacts} />
       <ApproachesMethodSection onScrollToContacts={scrollToContacts} />
       <B2bFaqReviewsSection />
       <ContactsEthicsFooter ref={contactsRef} />

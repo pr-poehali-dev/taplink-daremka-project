@@ -5,6 +5,7 @@ import { scrollTo } from "./constants";
 
 const navLinks: [string, string][] = [
   ["about", "Обо мне"],
+  ["approach", "Подход"],
   ["results", "Что по итогу"],
   ["pricing", "Стоимость"],
   ["faq", "Вопросы"],
