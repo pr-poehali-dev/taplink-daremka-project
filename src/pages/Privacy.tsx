@@ -87,12 +87,6 @@ const Privacy = () => {
                   daria.alvinceva1@yandex.ru
                 </a>
               </li>
-              <li>
-                <span className="text-[#9c7b6e]">Телефон:</span>{" "}
-                <a href="tel:+79185379305" className="text-[#b07d62] hover:underline">
-                  +7 918 537-93-05
-                </a>
-              </li>
             </ul>
           </section>
         </div>

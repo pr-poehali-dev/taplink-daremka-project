@@ -72,7 +72,6 @@ const ContactsEthicsFooter = forwardRef<ContactsEthicsFooterHandle>((_, ref) => 
             </p>
             <div className="space-y-5 mb-10">
               {[
-                ["Phone", "+7 (918) 537-93-05", "Телефон · WhatsApp", "tel:+79185379305"],
                 ["Mail", "me@alvintseva.ru", "Email", "mailto:me@alvintseva.ru"],
                 ["MapPin", "Москва, очно по договорённости", "Очные встречи", null],
                 ["Video", "Яндекс Телемост", "Онлайн-сессии", null],
