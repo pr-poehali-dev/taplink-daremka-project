@@ -70,6 +70,7 @@ const steps = [
     offer: "Среда для тех, кто выбирает жизнь, а не фасад: бизнес, жёсткие границы и физическая витальность. Без нытья — только точки А, Б и ресурсы.",
     preset: "Интересует клуб «Калибр»",
     cta: "Узнать о клубе",
+    href: "https://calibr-vitalnosti.poehali.ws/",
   },
 ];
 
@@ -170,12 +171,23 @@ export default function ValueSection({ onScrollToContacts }: ValueSectionProps) 
                 <div className="text-[#c4a99a]/70 text-xs uppercase tracking-widest mb-2">{s.tag}</div>
                 <h3 className="text-[#faf7f4] font-medium text-lg mb-3">{s.name}</h3>
                 <p className="text-[#c4a99a] text-sm font-light leading-relaxed flex-1 mb-6">{s.offer}</p>
-                <button
-                  onClick={() => onScrollToContacts(s.preset)}
-                  className="w-full py-3 rounded-full text-sm font-medium bg-[#b07d62] text-[#faf7f4] hover:bg-[#9c6b51] transition-colors duration-200"
-                >
-                  {s.cta}
-                </button>
+                {s.href ? (
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3 rounded-full text-sm font-medium text-center bg-[#b07d62] text-[#faf7f4] hover:bg-[#9c6b51] transition-colors duration-200"
+                  >
+                    {s.cta}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => onScrollToContacts(s.preset)}
+                    className="w-full py-3 rounded-full text-sm font-medium bg-[#b07d62] text-[#faf7f4] hover:bg-[#9c6b51] transition-colors duration-200"
+                  >
+                    {s.cta}
+                  </button>
+                )}
               </div>
             ))}
           </div>

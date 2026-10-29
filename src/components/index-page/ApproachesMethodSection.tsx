@@ -36,6 +36,7 @@ const plans = [
     highlight: false,
     cta: "Узнать о клубе",
     preset: "Интересует клуб «Калибр»",
+    href: "https://calibr-vitalnosti.poehali.ws/",
   },
 ];
 
@@ -100,12 +101,23 @@ export default function ApproachesMethodSection({ onScrollToContacts }: Approach
                   </li>
                 ))}
               </ul>
-              <button
-                onClick={() => onScrollToContacts(p.preset)}
-                className={`w-full py-3 rounded-full font-medium text-sm transition-all duration-200 ${p.highlight ? "bg-[#faf7f4] text-[#b07d62] hover:bg-[#f0e6de]" : "border border-[#d4b8ac] text-[#7a5f54] hover:border-[#b07d62] hover:text-[#b07d62]"}`}
-              >
-                {p.cta}
-              </button>
+              {p.href ? (
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 rounded-full font-medium text-sm text-center transition-all duration-200 border border-[#d4b8ac] text-[#7a5f54] hover:border-[#b07d62] hover:text-[#b07d62]"
+                >
+                  {p.cta}
+                </a>
+              ) : (
+                <button
+                  onClick={() => onScrollToContacts(p.preset)}
+                  className={`w-full py-3 rounded-full font-medium text-sm transition-all duration-200 ${p.highlight ? "bg-[#faf7f4] text-[#b07d62] hover:bg-[#f0e6de]" : "border border-[#d4b8ac] text-[#7a5f54] hover:border-[#b07d62] hover:text-[#b07d62]"}`}
+                >
+                  {p.cta}
+                </button>
+              )}
             </div>
           ))}
         </div>
