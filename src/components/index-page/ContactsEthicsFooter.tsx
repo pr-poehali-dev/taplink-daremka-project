@@ -67,10 +67,7 @@ const ContactsEthicsFooter = forwardRef<ContactsEthicsFooterHandle>((_, ref) => 
                 Написать в WhatsApp
               </a>
             </div>
-            <p className="text-[#b07d62] text-sm font-medium mb-10">
-              Получить скидку 20% на первую сессию
-            </p>
-            <div className="space-y-5 mb-10">
+            <div className="space-y-5 mb-10 mt-10">
               {[
                 ["Mail", "me@alvintseva.ru", "Email", "mailto:me@alvintseva.ru"],
                 ["MapPin", "Москва, очно по договорённости", "Очные встречи", null],
