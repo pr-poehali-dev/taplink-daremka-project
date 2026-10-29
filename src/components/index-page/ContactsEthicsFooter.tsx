@@ -160,6 +160,14 @@ const ContactsEthicsFooter = forwardRef<ContactsEthicsFooterHandle>((_, ref) => 
           </div>
           <div className="flex items-center gap-3">
             <a
+              href="https://calibr-vitalnosti.poehali.ws/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-8 px-4 rounded-full border border-[#c4a99a]/30 flex items-center text-xs font-medium text-[#c4a99a] hover:text-[#faf7f4] hover:border-[#b07d62] transition-colors duration-200 whitespace-nowrap"
+            >
+              Клуб «Калибр»
+            </a>
+            <a
               href="https://www.instagram.com/daremka_psy?stkn=MXA2cWJ5Njg5ZHRkcA%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
