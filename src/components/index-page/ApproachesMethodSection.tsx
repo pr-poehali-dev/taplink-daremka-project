@@ -9,8 +9,8 @@ const results = [
 const plans = [
   {
     name: "Индивидуальная сессия",
-    price: "7 500",
-    period: "₽ / сессия",
+    price: "15 000",
+    period: "₽ / 90 минут",
     desc: "Личная встреча",
     features: ["Психология, коучинг ICF и бизнес-консультирование в одном формате", "Индивидуальный подбор методов под ваш запрос", "МАК-карты и авторские методики", "Конфиденциально"],
     highlight: true,
@@ -29,8 +29,8 @@ const plans = [
   },
   {
     name: "Клуб «Калибр»",
-    price: "от 15 000",
-    period: "₽ / мес",
+    price: "Глубинная работа",
+    period: "",
     desc: "3-месячный трансформационный клуб",
     features: ["Для руководителей и предпринимателей", "12 недель: еженедельные созвоны + практика", "6 рабочих артефактов на выходе", "3 тарифа — от наблюдателя до VIP"],
     highlight: false,
@@ -87,7 +87,7 @@ export default function ApproachesMethodSection({ onScrollToContacts }: Approach
                 <div className={`font-semibold ${p.highlight ? "text-[#faf7f4]" : "text-[#2c2420]"}`}>{p.name}</div>
               </div>
               <div className="mb-8">
-                <span className={`font-cormorant text-4xl font-light ${p.highlight ? "text-[#faf7f4]" : "text-[#2c2420]"}`}>{p.price}</span>
+                <span className={`font-cormorant ${p.price.length > 9 ? "text-3xl" : "text-4xl"} font-light ${p.highlight ? "text-[#faf7f4]" : "text-[#2c2420]"}`}>{p.price}</span>
                 {p.period && <span className={`text-sm ml-1 ${p.highlight ? "text-[#faf7f4]/60" : "text-[#9c7b6e]"}`}>{p.period}</span>}
               </div>
               <ul className="space-y-3 mb-8 flex-1">
